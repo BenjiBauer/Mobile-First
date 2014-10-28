@@ -20,5 +20,9 @@ function Update () {
 
 realHPtext.text="HP: " + antHPfkt.HPvalue;
 
+	if(antHPfkt.HPvalue<=0){
+		realHPtext.text="Ant is dead";
+	}
+
 
 }

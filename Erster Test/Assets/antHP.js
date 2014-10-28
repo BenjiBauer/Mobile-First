@@ -11,7 +11,9 @@ function Start () {
 
 function Update () {
 
-
-
+	if(HPvalue<=0){
+		Debug.Log("ANT IS DEAD");
+		gameObject.active=false;
+	}
 }
 

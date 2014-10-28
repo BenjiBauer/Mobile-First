@@ -74,7 +74,7 @@ if(FireButtonFkt.fireGo == true){
     }
 }
 
-else if(FireButtonFkt.fireGo == true){
+else if(FireButtonFkt.fireGo == false && powercalc == true){
 	//Kugel wird geschleudert, wird zur Bewegung freigeschaltet
 	myRigid.isKinematic = false;
 	//powercalc = false;
@@ -103,6 +103,7 @@ if(Input.GetKeyDown(KeyCode.B)){
 	resetToGun();
 }
 
+
 }
 
 
@@ -118,6 +119,14 @@ function resetToGun(){
 	distance=0;
 	FireButtonFkt.fireGo = false;
 
+
+}
+
+function OnCollisionEnter2D (hit : Collision2D) {
+	
+	if(hit.collider){
+		resetToGun();
+	}
 
 }
 
