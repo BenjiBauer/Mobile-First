@@ -19,6 +19,7 @@ private var bulletStartPosX : float = 0;
 private var bulletStartPosY : float = 0;
 
 private var FireButtonFkt : ButtonFire;
+private var Fadenkreuzfkt : FadenkreuzBewegen;
 
 
 function Start () {
@@ -36,7 +37,9 @@ function Start () {
 	
 	var FireButtonObj = GameObject.Find("FireButton");
 	FireButtonFkt = FireButtonObj.GetComponent(ButtonFire);
-
+	
+	var FadenkreuzObj = GameObject.Find("Fadenkreuz");
+	Fadenkreuzfkt = FadenkreuzObj.GetComponent(FadenkreuzBewegen);
 }
 
 function Update () {
@@ -88,9 +91,11 @@ if(powercalc==false){//wird nur geprüft, wenn Maus nicht gedrueckt wird, ansons
 		mousex = mouseposition.x;
 	}
 	else{
-		mousex = transform.position.x;
+		mousex = mouseposition.x;
 	}
 	mousey = mouseposition.y;
+	Debug.Log(mousey);
+	Debug.Log(mousex);
 	//Ende der Feder an Maus
 	//mySpring.connectedAnchor= mouseposition;
 }
