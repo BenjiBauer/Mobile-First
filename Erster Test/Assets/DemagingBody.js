@@ -1,38 +1,30 @@
 ﻿#pragma strict
 
-public var damageOnBody : float = 20; //Höhe des Schadens
+private var damageOnThisBodyAnt1 : float = 20; //Höhe des Schadens
 private var antHPfkt : antHP; //Variable für Funktion
-private var gotHit : boolean = false; //Checkt, ob einal getroffen wurde
+private var GameSystemFkt : GameSystem;
 private var bulletObj : GameObject;
 
 function Awake() {
+	//Objekt und dann Funktion laden
+	var antObj = GameObject.Find("ant1");
+	antHPfkt = antObj.GetComponent(antHP);
 
-//Objekt und dann Funktion laden
-var antObj = GameObject.Find("ant");
-antHPfkt = antObj.GetComponent(antHP);
+	bulletObj = GameObject.Find("bullet");
 
-bulletObj = GameObject.Find("bullet");
-
+	var GameSystemObj = GameObject.Find("GameSystem");
+	GameSystemFkt = GameSystemObj.GetComponent(GameSystem);
+	damageOnThisBodyAnt1 = GameSystemFkt.damageOnBody;
 }
 
 
 
 //Sobald etwas in die Trigger eindringt, wird abgezogen
 function OnTriggerEnter2D(bulletObj : Collider2D){
-
 	//if(bulletObj.gameObject.tag == "bullet"){//Nur auslöden, wenn eine Kugel trifft KLAPPT NICHT! TREFFER WIRD GEGEBEN, ABER SCHADEN WIRD NICHT MEHR ABGEZOGE
-		if(gotHit==false){ //soll nur einmal aktiviert werden
-			antHPfkt.HPvalue -= damageOnBody;
+			antHPfkt.HPvalueAnt1 -= damageOnThisBodyAnt1;
 			Debug.Log("Treffer");		
-			gotHit =true;
 		}
 	//}
-}
 
 
-function OnTriggerExit2D(other : Collider2D){
-
-	gotHit = false;//sobald die Kugel draußen ist, ist sie wieder aktiviert.
-
-
-}

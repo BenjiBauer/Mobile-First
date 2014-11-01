@@ -44,7 +44,7 @@ function Start () {
 
 function Update () {
 
-
+Debug.Log("SPEED "+myRigid.velocity);
 
 if(FireButtonFkt.fireGo == true){
 	powercalc = true;

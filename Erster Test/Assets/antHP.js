@@ -1,17 +1,17 @@
 ﻿#pragma strict
 
-public var HPvalue : float = 100;
+public var HPvalueAnt1 : float;
+private var GameSystemFkt : GameSystem;
 //public var damage : float = 20;
 
-function Start () {
-
-//HPvalue = 100;
-
+function Awake() {
+	var GameSystemObj = GameObject.Find("GameSystem");
+	GameSystemFkt = GameSystemObj.GetComponent(GameSystem);
+	HPvalueAnt1  = GameSystemFkt.HPvalue;
 }
 
 function Update () {
-
-	if(HPvalue<=0){
+	if(HPvalueAnt1<=0){//Ameise wird deaktiviert, wenn sie kein Leben mehr hat
 		Debug.Log("ANT IS DEAD");
 		gameObject.active=false;
 	}

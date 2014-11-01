@@ -4,7 +4,7 @@ private var antHPfkt : antHP;
 
 function Awake(){
 
-var antHPobj = GameObject.Find("ant");
+var antHPobj = GameObject.Find("ant1");
 antHPfkt = antHPobj.GetComponent(antHP);
 
 
@@ -18,9 +18,9 @@ realHPtext = GetComponent(GUIText);
 
 function Update () {
 
-realHPtext.text="HP: " + antHPfkt.HPvalue;
+realHPtext.text="HP: " + antHPfkt.HPvalueAnt1;
 
-	if(antHPfkt.HPvalue<=0){
+	if(antHPfkt.HPvalueAnt1<=0){
 		realHPtext.text="Ant is dead";
 	}
 

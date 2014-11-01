@@ -51,6 +51,7 @@
      <Compile Include="Assets\DemagingHead.js" />
      <Compile Include="Assets\Disapear.js" />
      <Compile Include="Assets\FadenkreuzBewegen.js" />
+     <Compile Include="Assets\GameSystem.js" />
      <Compile Include="Assets\HPAnzeige.js" />
      <Compile Include="Assets\MoveCamera.js" />
      <Compile Include="Assets\PinchZoom.js" />
