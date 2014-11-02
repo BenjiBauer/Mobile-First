@@ -56,6 +56,7 @@
      <Compile Include="Assets\MoveCamera.js" />
      <Compile Include="Assets\PinchZoom.js" />
      <Compile Include="Assets\PowerAnzeige.js" />
+     <Compile Include="Assets\PowerbarFunction.js" />
      <Compile Include="Assets\Schuss.js" />
      <Compile Include="Assets\Shoot.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\CameraRelativeControl.js" />
