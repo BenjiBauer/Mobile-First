@@ -94,8 +94,7 @@ if(powercalc==false){//wird nur geprüft, wenn Maus nicht gedrueckt wird, ansons
 		mousex = mouseposition.x;
 	}
 	mousey = mouseposition.y;
-	Debug.Log(mousey);
-	Debug.Log(mousex);
+
 	//Ende der Feder an Maus
 	//mySpring.connectedAnchor= mouseposition;
 }

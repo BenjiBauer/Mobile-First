@@ -42,5 +42,5 @@ private	var firstTouch : boolean = false;
 		
 		var position : Vector3 = camera_position + direction;
 		
-		transform.position = position;
+		transform.position.x = position.x;
 	}
