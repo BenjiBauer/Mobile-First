@@ -97,15 +97,15 @@ if(powercalc==false){//wird nur geprüft, wenn Maus nicht gedrueckt wird, ansons
 
 	//Ende der Feder an Maus
 	//mySpring.connectedAnchor= mouseposition;
-}
+	}
 
-if((bultrans.position.x>mySpring.connectedAnchor.x||bultrans.position.y>mySpring.connectedAnchor.y) && myRigid.isKinematic==false){
-	mySpring.enabled = false;//Sobald die Kugel das Ende der Feder erreicht hat, wird die Feder entfernt
-}
+	if((bultrans.position.x>mySpring.connectedAnchor.x||bultrans.position.y>mySpring.connectedAnchor.y) && myRigid.isKinematic==false){
+		mySpring.enabled = false;//Sobald die Kugel das Ende der Feder erreicht hat, wird die Feder entfernt
+	}
 
-if(Input.GetKeyDown(KeyCode.B)){
-	resetToGun();
-}
+	if(Input.GetKeyDown(KeyCode.B)){
+		resetToGun();
+	}
 
 
 }
