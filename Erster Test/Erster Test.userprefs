@@ -1,17 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Ant/DemagingHead2.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Ant/PowerbarFunction.js">
     <Files>
-      <File FileName="Assets/Ant/ant2HP.js" Line="1" Column="1" />
-      <File FileName="Assets/Ant/PowerbarFunction.js" Line="1" Column="1" />
-      <File FileName="Assets/Ant/PowerbarFunctionAnt2.js" Line="1" Column="1" />
-      <File FileName="Assets/GameSystem.js" Line="1" Column="1" />
-      <File FileName="Assets/HPAnzeige.js" Line="1" Column="1" />
-      <File FileName="Assets/CameraFollow.js" Line="21" Column="1" />
-      <File FileName="Assets/MoveCamera.js" Line="1" Column="1" />
-      <File FileName="Assets/Ant/DemagingHead2.js" Line="28" Column="1" />
       <File FileName="Assets/Ant/antHP.js" Line="1" Column="1" />
-      <File FileName="Assets/Shoot.js" Line="111" Column="2" />
+      <File FileName="Assets/Ant/PowerbarFunction.js" Line="24" Column="51" />
+      <File FileName="Assets/GameSystem.js" Line="1" Column="1" />
+      <File FileName="Assets/CameraFollow.js" Line="1" Column="1" />
+      <File FileName="Assets/MoveCamera.js" Line="1" Column="1" />
+      <File FileName="Assets/Shoot.js" Line="1" Column="1" />
+      <File FileName="Assets/Ant/DemagingBody.js" Line="1" Column="1" />
+      <File FileName="Assets/Ant/DemagingHead.js" Line="12" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

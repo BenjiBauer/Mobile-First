@@ -21,7 +21,7 @@ function Start () {
 
 function Update () {
 
-powerbarTrans.localScale.x=(antHPfkt.HPvalueAnt1/100);//Powerbar wird mit Punktestand kleiner
+powerbarTrans.localScale.x=(antHPfkt.HPvalueAnt1/200);//Powerbar wird mit Punktestand kleiner
 powerbarTrans.rotation.z = powerbarTrans.rotation.z-antTrans.rotation.z;//Powerbar bleibt gerade
 
 	if(antHPfkt.HPvalueAnt1<=0){
