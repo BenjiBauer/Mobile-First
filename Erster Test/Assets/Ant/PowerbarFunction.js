@@ -6,10 +6,10 @@ public var offset : Vector2;
 
 function Awake(){
 
-var antHPobj = GameObject.Find("ant1");
-antHPfkt = antHPobj.GetComponent(antHP);
-antTrans = antHPobj.GetComponent(Transform);
-powerbarTrans = GetComponent(Transform);
+	antHPfkt = GetComponentInParent(antHP);
+	antTrans = GetComponentInParent(Transform);
+	powerbarTrans = GetComponent(Transform);
+	
 
 }
 
@@ -21,8 +21,8 @@ function Start () {
 
 function Update () {
 
-powerbarTrans.localScale.x=(antHPfkt.HPvalueAnt1/500);
-powerbarTrans.position = antTrans.position + offset;
+powerbarTrans.localScale.x=(antHPfkt.HPvalueAnt1/100);//Powerbar wird mit Punktestand kleiner
+powerbarTrans.rotation.z = powerbarTrans.rotation.z-antTrans.rotation.z;//Powerbar bleibt gerade
 
 	if(antHPfkt.HPvalueAnt1<=0){
 		gameObject.active=false;

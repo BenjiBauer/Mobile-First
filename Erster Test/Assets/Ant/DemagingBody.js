@@ -7,8 +7,8 @@ private var bulletObj : GameObject;
 
 function Awake() {
 	//Objekt und dann Funktion laden
-	var antObj = GameObject.Find("ant1");
-	antHPfkt = antObj.GetComponent(antHP);
+	//var antObj = GameObject.Find("ant1");
+	antHPfkt = GetComponentInParent(antHP);
 
 	bulletObj = GameObject.Find("bullet");
 
