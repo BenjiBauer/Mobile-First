@@ -3,7 +3,7 @@
 private var myRigid : Rigidbody2D; //Variable fuer Unterpunkt
 private var mySpring : SpringJoint2D;
 private var bultrans : Transform;
-public  var distance : float = 0;
+public  var distance : float = 0; //muss 
 private var distanceSet : boolean = false; //checkt, ob der Wert für die Distanz schon gesetzt wurde
 public  var maxDistance : float = 35;
 public 	var powerSpeed : float = 0.1;
@@ -19,7 +19,7 @@ private var bulletStartPosX : float = 0;
 private var bulletStartPosY : float = 0;
 
 private var FireButtonFkt : ButtonFire;
-private var Fadenkreuzfkt : FadenkreuzBewegen;
+//private var Fadenkreuzfkt : FadenkreuzBewegen;
 
 
 function Start () {
@@ -38,13 +38,13 @@ function Start () {
 	var FireButtonObj = GameObject.Find("FireButton");
 	FireButtonFkt = FireButtonObj.GetComponent(ButtonFire);
 	
-	var FadenkreuzObj = GameObject.Find("Fadenkreuz");
-	Fadenkreuzfkt = FadenkreuzObj.GetComponent(FadenkreuzBewegen);
+//	var FadenkreuzObj = GameObject.Find("Fadenkreuz");
+//	Fadenkreuzfkt = FadenkreuzObj.GetComponent(FadenkreuzBewegen);
 }
 
 function Update () {
 
-Debug.Log("SPEED "+myRigid.velocity);
+//Debug.Log("SPEED "+myRigid.velocity);
 
 if(FireButtonFkt.fireGo == true){
 	powercalc = true;

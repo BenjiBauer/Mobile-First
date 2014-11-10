@@ -61,6 +61,7 @@
      <Compile Include="Assets\GameSystem.js" />
      <Compile Include="Assets\HPAnzeige.js" />
      <Compile Include="Assets\MoveCamera.js" />
+     <Compile Include="Assets\NewShoot.js" />
      <Compile Include="Assets\PinchZoom.js" />
      <Compile Include="Assets\PowerAnzeige.js" />
      <Compile Include="Assets\Schuss.js" />

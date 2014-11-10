@@ -16,8 +16,8 @@ bulletRigid = BulletObj.GetComponent(Rigidbody2D);
 
 function Update () {
 
-if(bulletRigid.isKinematic == false){
+//if(bulletRigid.isKinematic == false){
 	CamTrans.position.x=BulletTrans.position.x+OffsetCameraX;
-}
+//}
 
 }

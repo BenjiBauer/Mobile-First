@@ -4,7 +4,7 @@ public var KreuzPosY : float;
 public var KreuzSize : float;
 private var windowRect : Rect;
 public var FadenkreuzImage : Texture2D;
-public var FadenkreuzPos : Vector2;
+private var FadenkreuzPos = new Vector2();
 
 function Start(){
 

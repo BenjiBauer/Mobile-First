@@ -17,7 +17,7 @@ myTrans = GetComponent(Transform);
 function Update () {
 
 mouseposition = Camera.main.ScreenToWorldPoint(new Vector3 (Input.mousePosition.x,Input.mousePosition.y,0));
-//myRigid.AddForce(Vector2(10,0), ForceMode2D.Force);
-myRigid.AddForceAtPosition(mouseposition,myTrans.position, ForceMode2D.Force);
+myRigid.AddForce(Vector2(100,100), ForceMode2D.Force);
+//myRigid.AddForceAtPosition(mouseposition,myTrans.position, ForceMode2D.Force);
 
 }

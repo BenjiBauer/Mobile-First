@@ -2,7 +2,6 @@
 private var powerbarTrans : Transform;
 private var antHPfkt : antHP;
 private var antTrans : Transform;
-public var offset : Vector2;
 
 function Awake(){
 
