@@ -1,23 +1,23 @@
 ﻿#pragma strict
 
 private var CamTrans : Transform;
-private var BulletTrans : Transform;
+private var bullet1Trans : Transform;
 public var OffsetCameraX : float;
-private var bulletRigid : Rigidbody2D;
+private var bullet1Rigid : Rigidbody2D;
 
 function Start () {
 
 CamTrans = gameObject.GetComponent(Transform);
-var BulletObj = GameObject.Find("bullet");
-BulletTrans = BulletObj.GetComponent(Transform);
-bulletRigid = BulletObj.GetComponent(Rigidbody2D);
+var bullet1Obj = GameObject.Find("bullet1");
+bullet1Trans = bullet1Obj.GetComponent(Transform);
+bullet1Rigid = bullet1Obj.GetComponent(Rigidbody2D);
 
 }
 
 function Update () {
 
 //if(bulletRigid.isKinematic == false){
-	CamTrans.position.x=BulletTrans.position.x+OffsetCameraX;
+	CamTrans.position.x=bullet1Trans.position.x+OffsetCameraX;
 //}
 
 }

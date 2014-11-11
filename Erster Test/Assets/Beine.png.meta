@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: f285d158f1203499aa8e6228ebed9615
+guid: 32b1461057b394c45b618422d2333617
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ant_0
-    21300002: ant_1
+    21300000: Beine_0
+    21300002: Beine_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -33,7 +33,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -45,25 +45,25 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: ant_0
+    - name: Beine_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 790
-        width: 1529
-        height: 1002
+        y: 0
+        width: 1140
+        height: 1129
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ant_1
+    - name: Beine_1
       rect:
         serializedVersion: 2
-        x: 1048
+        x: 1190
         y: 0
-        width: 3280
-        height: 1792
+        width: 1097
+        height: 1143
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-  spritePackingTag: 
+  spritePackingTag: Ameise
   userData: 

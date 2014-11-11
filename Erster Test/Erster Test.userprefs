@@ -1,20 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FadenkreuzBewegen.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NewShoot.js">
     <Files>
-      <File FileName="Assets/NewShoot.js" Line="15" Column="1" />
-      <File FileName="Assets/Shoot.js" Line="137" Column="1" />
-      <File FileName="Assets/Ant/antHP.js" Line="1" Column="1" />
-      <File FileName="Assets/Ant/PowerbarFunction.js" Line="1" Column="1" />
+      <File FileName="Assets/PowerAnzeige.js" Line="32" Column="3" />
+      <File FileName="Assets/NewShoot.js" Line="96" Column="1" />
       <File FileName="Assets/GameSystem.js" Line="1" Column="1" />
-      <File FileName="Assets/CameraFollow.js" Line="21" Column="3" />
-      <File FileName="Assets/MoveCamera.js" Line="1" Column="1" />
-      <File FileName="Assets/Ant/DemagingBody.js" Line="1" Column="1" />
-      <File FileName="Assets/Ant/DemagingHead.js" Line="1" Column="1" />
-      <File FileName="Assets/PowerAnzeige.js" Line="24" Column="1" />
-      <File FileName="Assets/Schuss.js" Line="1" Column="1" />
-      <File FileName="Assets/ButtonFire.js" Line="1" Column="1" />
-      <File FileName="Assets/FadenkreuzBewegen.js" Line="16" Column="85" />
+      <File FileName="Assets/CameraFollow.js" Line="9" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

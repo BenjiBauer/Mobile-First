@@ -15,21 +15,26 @@ private var bulletStartPos = new Vector2();
 private var endForcePower = new Vector2();
 private var ZeroPos = new Vector2().zero;
 public  var power : float;
+public  var gotHit : boolean=false;
 
 private var fireGo : boolean =false;
 
 function Start () {
 
-myRigid = GetComponent(Rigidbody2D);
-myTrans = GetComponent(Transform);
-FireForce.x=0;
-FireForce.y=0;
-bulletStartPos=myTrans.position;
-endForcePower.x=bulletStartPos.x+2;
-endForcePower.y=bulletStartPos.y+2;
-Debug.Log(endForcePower.x);
+	myRigid = GetComponent(Rigidbody2D);
+	myTrans = GetComponent(Transform);
+	FireForce.x=0;
+	FireForce.y=0;
+	bulletStartPos=myTrans.position;
+	endForcePower.x=bulletStartPos.x+2;
+	endForcePower.y=bulletStartPos.y+2;
+	Debug.Log(endForcePower.x);
 
 
+}
+
+function Awake(){
+	gotHit=false;
 }
 
 function Update () {
@@ -66,10 +71,6 @@ mouseposition = Camera.main.ScreenToWorldPoint(new Vector3 (Input.mousePosition.
 	}
 	
 
-if(myTrans.position.x<endForcePower.x && myTrans.position.y<endForcePower.y&&fireGo==true){
-	myRigid.AddForce(FireForce, ForceMode2D.Force);
-}
-
 if(Input.GetKeyDown(KeyCode.B)){
 		resetToGun();
 	}
@@ -89,10 +90,18 @@ function resetToGun(){
 	myRigid.isKinematic=true;
 }
 
+function OnTriggerStay2D (other : Collider2D) {
+	if(fireGo==true){
+		myRigid.AddForce(FireForce, ForceMode2D.Force);
+	}
+
+}
+
 function OnCollisionEnter2D (hit : Collision2D) {
 	
 	if(hit.collider){
 		resetToGun();
+		gotHit=true;
 	}
 
 }
