@@ -46,14 +46,19 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Ant\DemagingBody.js" />
-     <Compile Include="Assets\Ant\DemagingBody2.js" />
-     <Compile Include="Assets\Ant\DemagingHead.js" />
-     <Compile Include="Assets\Ant\DemagingHead2.js" />
-     <Compile Include="Assets\Ant\PowerbarFunction.js" />
-     <Compile Include="Assets\Ant\PowerbarFunctionAnt2.js" />
-     <Compile Include="Assets\Ant\ant2HP.js" />
-     <Compile Include="Assets\Ant\antHP.js" />
+     <Compile Include="Assets\Ant Old Scripts\DemagingBody.js" />
+     <Compile Include="Assets\Ant Old Scripts\DemagingBody2.js" />
+     <Compile Include="Assets\Ant Old Scripts\DemagingHead.js" />
+     <Compile Include="Assets\Ant Old Scripts\DemagingHead2.js" />
+     <Compile Include="Assets\Ant Old Scripts\PowerbarFunction.js" />
+     <Compile Include="Assets\Ant Old Scripts\PowerbarFunctionAnt2.js" />
+     <Compile Include="Assets\Ant Old Scripts\ant2HP.js" />
+     <Compile Include="Assets\Ant Old Scripts\antHP.js" />
+     <Compile Include="Assets\Ant\Scripts\AntDemageBody.js" />
+     <Compile Include="Assets\Ant\Scripts\DomeDamage.js" />
+     <Compile Include="Assets\Ant\Scripts\HealthPoints.js" />
+     <Compile Include="Assets\Ant\Scripts\TankDamage.js" />
+     <Compile Include="Assets\AntHealthBarFunction.js" />
      <Compile Include="Assets\ButtonFire.js" />
      <Compile Include="Assets\CameraFollow.js" />
      <Compile Include="Assets\Disapear.js" />
@@ -78,6 +83,7 @@
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\SmoothFollow2D.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\ZoomCamera.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\tapcontrol.js" />
+     <Compile Include="Assets\tankHealthBarFunction.js" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Transparent Vertex Color.shader" />

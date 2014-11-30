@@ -97,12 +97,12 @@ function OnTriggerStay2D (other : Collider2D) {
 
 }
 
-function OnCollisionEnter2D (hit : Collision2D) {
-	
+
+function OnCollisionEnter2D (hit : Collision2D) {	
 	if(hit.collider){
 		resetToGun();
 		gotHit=true;
 	}
-
 }
+
 

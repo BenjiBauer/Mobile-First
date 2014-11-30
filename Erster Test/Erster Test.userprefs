@@ -1,11 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NewShoot.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameSystem.js">
     <Files>
-      <File FileName="Assets/PowerAnzeige.js" Line="32" Column="3" />
-      <File FileName="Assets/NewShoot.js" Line="96" Column="1" />
-      <File FileName="Assets/GameSystem.js" Line="1" Column="1" />
-      <File FileName="Assets/CameraFollow.js" Line="9" Column="1" />
+      <File FileName="Assets/Ant/Scripts/AntRotating.cs" Line="1" Column="1" />
+      <File FileName="Assets/NewShoot.js" Line="1" Column="1" />
+      <File FileName="Assets/GameSystem.js" Line="14" Column="35" />
+      <File FileName="Assets/Ant Old Scripts/antHP.js" Line="1" Column="1" />
+      <File FileName="Assets/AntHealthBarFunction.js" Line="1" Column="1" />
+      <File FileName="Assets/Ant/Scripts/HealthPoints.js" Line="1" Column="1" />
+      <File FileName="Assets/RotatingGun.cs" Line="1" Column="1" />
+      <File FileName="Assets/Ant Old Scripts/DemagingBody.js" Line="1" Column="1" />
+      <File FileName="Assets/Ant/Scripts/AntDemageBody.js" Line="1" Column="1" />
+      <File FileName="Assets/Ant/Scripts/DomeDamage.js" Line="22" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

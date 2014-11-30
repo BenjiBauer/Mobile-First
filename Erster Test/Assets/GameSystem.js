@@ -11,7 +11,7 @@ private var bullet2Fkt : NewShoot;
 
 function Start () {
 
-	bullet1 = GameObject.Find("bullet1");
+	bullet1 = GameObject.Find("bullet");
 	bullet2 = GameObject.Find("bullet2");
 	bullet1Fkt = bullet1.GetComponent(NewShoot);
 	bullet2Fkt = bullet2.GetComponent(NewShoot);
