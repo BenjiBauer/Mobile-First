@@ -10,30 +10,32 @@ private var bullet3 : GameObject;
 private var bullet4 : GameObject;
 private var bullet5 : GameObject;
 private var bullet6 : GameObject;
-private var bullet1Fkt : BulletShoot;
-private var bullet2Fkt : BulletShoot;
-private var bullet3Fkt : BulletShoot;
-private var bullet4Fkt : BulletShoot;
-private var bullet5Fkt : BulletShoot;
-private var bullet6Fkt : BulletShoot;
+private var bullet1Fkt : NewBulletShoot;
+private var bullet2Fkt : NewBulletShoot;
+private var bullet3Fkt : NewBulletShoot;
+private var bullet4Fkt : NewBulletShoot;
+private var bullet5Fkt : NewBulletShoot;
+private var bullet6Fkt : NewBulletShoot;
 
 public var bulletIsFlying : boolean = false;
+public var bulletIsLanded : boolean = false;
+
 
 function Start () {
 
-	bullet1 = GameObject.Find("bullet1");
-	bullet2 = GameObject.Find("bullet2");
-	bullet3 = GameObject.Find("bullet3");
-	bullet4 = GameObject.Find("bullet4");
-	bullet5 = GameObject.Find("bullet5");
-	bullet6 = GameObject.Find("bullet6");
+	bullet1 = GameObject.Find("Shooter1");
+	bullet2 = GameObject.Find("Shooter2");
+	bullet3 = GameObject.Find("Shooter3");
+	bullet4 = GameObject.Find("Shooter4");
+	bullet5 = GameObject.Find("Shooter5");
+	bullet6 = GameObject.Find("Shooter6");
 
-	bullet1Fkt = bullet1.GetComponent(BulletShoot);
-	bullet2Fkt = bullet2.GetComponent(BulletShoot);
-	bullet3Fkt = bullet3.GetComponent(BulletShoot);
-	bullet4Fkt = bullet4.GetComponent(BulletShoot);
-	bullet5Fkt = bullet5.GetComponent(BulletShoot);
-	bullet6Fkt = bullet6.GetComponent(BulletShoot);
+	bullet1Fkt = bullet1.GetComponent(NewBulletShoot);
+	bullet2Fkt = bullet2.GetComponent(NewBulletShoot);
+	bullet3Fkt = bullet3.GetComponent(NewBulletShoot);
+	bullet4Fkt = bullet4.GetComponent(NewBulletShoot);
+	bullet5Fkt = bullet5.GetComponent(NewBulletShoot);
+	bullet6Fkt = bullet6.GetComponent(NewBulletShoot);
 	bullet2.active=false;
 	bullet3.active=false;
 	bullet4.active=false;
@@ -42,35 +44,42 @@ function Start () {
 }
 
 function Update () {
-
-	if(bullet1Fkt.gotHit==true){
-		bullet2.active=true;
-		bullet1.active=false;
-		bullet1Fkt.gotHit=false;
+	
+	if(bulletIsFlying==false && bullet1Fkt.ShootIsPressed==true&& bulletIsLanded==true){//Sobald Kugel gelandet ist
+		bullet2.active=true;//Wird aktiviert
+		bullet1.active=false;//Wird deaktiviert
+		bulletIsLanded=false; //Wird zurück gestellt
+		bullet1Fkt.ShootIsPressed=false;//Weil es nicht mehr gedrückt wird
 	}
-	else if(bullet2Fkt.gotHit==true){
+	else if(bulletIsFlying==false && bullet2Fkt.ShootIsPressed==true&& bulletIsLanded==true){
 		bullet3.active=true;
 		bullet2.active=false;
-		bullet2Fkt.gotHit=false;
+		bulletIsLanded=false;
+		bullet2Fkt.ShootIsPressed=false;
 	}
-	else if(bullet3Fkt.gotHit==true){
+	else if(bulletIsFlying==false && bullet3Fkt.ShootIsPressed==true&& bulletIsLanded==true){
 		bullet4.active=true;
 		bullet3.active=false;
-		bullet3Fkt.gotHit=false;
+		bulletIsLanded=false;
+		bullet3Fkt.ShootIsPressed=false;
 	}
-	else if(bullet4Fkt.gotHit==true){
+	else if(bulletIsFlying==false && bullet4Fkt.ShootIsPressed==true&& bulletIsLanded==true){
 		bullet5.active=true;
 		bullet4.active=false;
-		bullet4Fkt.gotHit=false;
+		bulletIsLanded=false;
+		bullet4Fkt.ShootIsPressed=false;
 	}
-	else if(bullet5Fkt.gotHit==true){
+	else if(bulletIsFlying==false && bullet5Fkt.ShootIsPressed==true&& bulletIsLanded==true){
 		bullet6.active=true;
 		bullet5.active=false;
-		bullet5Fkt.gotHit=false;
+		bulletIsLanded=false;
+		bullet5Fkt.ShootIsPressed=false;
 	}
-	else if(bullet6Fkt.gotHit==true){
-		bullet6.active=true;
-		bullet1.active=false;
-		bullet1Fkt.gotHit=false;
+	else if(bulletIsFlying==false && bullet6Fkt.ShootIsPressed==true&& bulletIsLanded==true){
+		bullet1.active=true;
+		bullet6.active=false;
+		bulletIsLanded=false;
+		bullet6Fkt.ShootIsPressed=false;
 	}
+	
 }

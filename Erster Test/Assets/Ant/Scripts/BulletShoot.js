@@ -47,8 +47,8 @@ function Update () {
 				FireForce.x=FireForce.x+powerSpeed;
 				FireForce.y=FireForce.y+directionAdd;
 				power = Vector2.Distance(ZeroPos,FireForce);
-				Debug.Log("PowerX= "+power);
-				Debug.Log("PowerPoint= "+FireForce);
+				//Debug.Log("PowerX= "+power);
+				//Debug.Log("PowerPoint= "+FireForce);
 			}
 		}
 		else{
@@ -59,8 +59,8 @@ function Update () {
 				FireForce.y=FireForce.y+powerSpeed;
 				FireForce.x=FireForce.x+directionAdd;
 				power = Vector2.Distance(ZeroPos,FireForce);
-				Debug.Log("PowerY= "+power);
-				Debug.Log("PowerPoint= "+FireForce);
+				//Debug.Log("PowerY= "+power);
+				//Debug.Log("PowerPoint= "+FireForce);
 			}
 		}
 		if(Input.GetMouseButtonUp(0)){

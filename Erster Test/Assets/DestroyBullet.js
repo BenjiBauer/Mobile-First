@@ -2,15 +2,13 @@
 
 private var GameSystemObj : GameObject;
 private var GameSystemFkt : GameSystem;
-public  var AlreadyFlying : boolean = false;
+public  var AlreadyFlying : boolean = true;
+
 
 function Start () {
 GameSystemObj=GameObject.Find("GameSystem");
 GameSystemFkt=GameSystemObj.GetComponent(GameSystem);
-}
-
-function Awake(){
-
+GameSystemFkt.bulletIsFlying=true;
 }
 
 function Update(){
@@ -23,5 +21,6 @@ function OnCollisionEnter2D (hit : Collision2D) {
 		Destroy(gameObject);
 		GameSystemFkt.bulletIsFlying=false;
 		AlreadyFlying=false;
+		GameSystemFkt.bulletIsLanded=true;
 	}
 }
