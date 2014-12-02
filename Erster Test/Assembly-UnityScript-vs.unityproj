@@ -55,6 +55,8 @@
      <Compile Include="Assets\Ant Old Scripts\ant2HP.js" />
      <Compile Include="Assets\Ant Old Scripts\antHP.js" />
      <Compile Include="Assets\Ant\Scripts\AntDemageBody.js" />
+     <Compile Include="Assets\Ant\Scripts\AntRotating.js" />
+     <Compile Include="Assets\Ant\Scripts\BulletShoot.js" />
      <Compile Include="Assets\Ant\Scripts\DomeDamage.js" />
      <Compile Include="Assets\Ant\Scripts\HealthPoints.js" />
      <Compile Include="Assets\Ant\Scripts\TankDamage.js" />
@@ -63,9 +65,12 @@
      <Compile Include="Assets\CameraFollow.js" />
      <Compile Include="Assets\Disapear.js" />
      <Compile Include="Assets\FadenkreuzBewegen.js" />
+     <Compile Include="Assets\ForcePointFkt.js" />
      <Compile Include="Assets\GameSystem.js" />
      <Compile Include="Assets\HPAnzeige.js" />
      <Compile Include="Assets\MoveCamera.js" />
+     <Compile Include="Assets\NewRotatingGun.js" />
+     <Compile Include="Assets\NewRotatingGunRight.js" />
      <Compile Include="Assets\NewShoot.js" />
      <Compile Include="Assets\PinchZoom.js" />
      <Compile Include="Assets\PowerAnzeige.js" />
@@ -83,6 +88,7 @@
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\SmoothFollow2D.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\ZoomCamera.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\tapcontrol.js" />
+     <Compile Include="Assets\TEST.js" />
      <Compile Include="Assets\tankHealthBarFunction.js" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />

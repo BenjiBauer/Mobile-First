@@ -20,7 +20,6 @@ public  var gotHit : boolean=false;
 private var fireGo : boolean =false;
 
 function Start () {
-
 	myRigid = GetComponent(Rigidbody2D);
 	myTrans = GetComponent(Transform);
 	FireForce.x=0;
@@ -29,8 +28,6 @@ function Start () {
 	endForcePower.x=bulletStartPos.x+2;
 	endForcePower.y=bulletStartPos.y+2;
 	Debug.Log(endForcePower.x);
-
-
 }
 
 function Awake(){
@@ -39,35 +36,37 @@ function Awake(){
 
 function Update () {
 
-mouseposition = Camera.main.ScreenToWorldPoint(new Vector3 (Input.mousePosition.x,Input.mousePosition.y,0));
+	if(fireGo==false){
+		mouseposition = Camera.main.ScreenToWorldPoint(new Vector3 (Input.mousePosition.x,Input.mousePosition.y,0));
 
-	if(mouseposition.x>mouseposition.y){//damit gleichschnell geladen wird
-		if(Input.GetMouseButtonDown(0)){
-			directionAdd=powerSpeed*((mouseposition.y-myTrans.position.y)/(mouseposition.x-myTrans.position.x));
+		if(mouseposition.x>mouseposition.y){//damit gleichschnell geladen wird
+			if(Input.GetMouseButtonDown(0)){
+				directionAdd=powerSpeed*((mouseposition.y-myTrans.position.y)/(mouseposition.x-myTrans.position.x));
+			}
+			if(Input.GetMouseButton(0)&& power<maxPower){
+				FireForce.x=FireForce.x+powerSpeed;
+				FireForce.y=FireForce.y+directionAdd;
+				power = Vector2.Distance(ZeroPos,FireForce);
+				Debug.Log("PowerX= "+power);
+				Debug.Log("PowerPoint= "+FireForce);
+			}
 		}
-		if(Input.GetMouseButton(0)&& power<maxPower){
-			FireForce.x=FireForce.x+powerSpeed;
-			FireForce.y=FireForce.y+directionAdd;
-			power = Vector2.Distance(ZeroPos,FireForce);
-			Debug.Log("PowerX= "+power);
-			Debug.Log("PowerPoint= "+FireForce);
+		else{
+			if(Input.GetMouseButtonDown(0)){
+				directionAdd=powerSpeed*((mouseposition.x-myTrans.position.x)/(mouseposition.y-myTrans.position.y));
+			}
+			if(Input.GetMouseButton(0)&& power<maxPower){
+				FireForce.y=FireForce.y+powerSpeed;
+				FireForce.x=FireForce.x+directionAdd;
+				power = Vector2.Distance(ZeroPos,FireForce);
+				Debug.Log("PowerY= "+power);
+				Debug.Log("PowerPoint= "+FireForce);
+			}
 		}
-	}
-	else{
-		if(Input.GetMouseButtonDown(0)){
-			directionAdd=powerSpeed*((mouseposition.x-myTrans.position.x)/(mouseposition.y-myTrans.position.y));
+		if(Input.GetMouseButtonUp(0)){
+			fireGo=true;
+			myRigid.isKinematic=false;
 		}
-		if(Input.GetMouseButton(0)&& power<maxPower){
-			FireForce.y=FireForce.y+powerSpeed;
-			FireForce.x=FireForce.x+directionAdd;
-			power = Vector2.Distance(ZeroPos,FireForce);
-			Debug.Log("PowerY= "+power);
-			Debug.Log("PowerPoint= "+FireForce);
-		}
-	}
-	if(Input.GetMouseButtonUp(0)){
-		fireGo=true;
-		myRigid.isKinematic=false;
 	}
 	
 
@@ -77,8 +76,6 @@ if(Input.GetKeyDown(KeyCode.B)){
 
 
 }
-
-
 
 function resetToGun(){
 	FireForce.x=0;
@@ -94,7 +91,10 @@ function OnTriggerStay2D (other : Collider2D) {
 	if(fireGo==true){
 		myRigid.AddForce(FireForce, ForceMode2D.Force);
 	}
+}
 
+function OnTriggerExit2D (other : Collider2D) {
+	//fireGo=false;
 }
 
 
