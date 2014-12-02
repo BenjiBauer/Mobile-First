@@ -1,14 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NewRotatingGunRight.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TEST.js">
     <Files>
-      <File FileName="Assets/Ant/Scripts/BulletShoot.js" Line="14" Column="7" />
-      <File FileName="Assets/GameSystem.js" Line="1" Column="1" />
-      <File FileName="Assets/PowerAnzeige.js" Line="14" Column="1" />
-      <File FileName="Assets/NewRotatingGun.js" Line="24" Column="36" />
-      <File FileName="Assets/Ant/Scripts/AntRotating.js" Line="13" Column="47" />
+      <File FileName="Assets/Ant/Scripts/BulletShoot.js" Line="89" Column="1" />
+      <File FileName="Assets/GameSystem.js" Line="20" Column="12" />
+      <File FileName="Assets/PowerAnzeige.js" Line="12" Column="1" />
+      <File FileName="Assets/NewRotatingGun.js" Line="1" Column="1" />
+      <File FileName="Assets/Ant/Scripts/AntRotating.js" Line="1" Column="1" />
       <File FileName="Assets/Ant/Scripts/TankDamage.js" Line="1" Column="1" />
       <File FileName="Assets/NewRotatingGunRight.js" Line="1" Column="1" />
+      <File FileName="Assets/TEST.js" Line="36" Column="7" />
+      <File FileName="Assets/Ant/Scripts/DomeDamage.js" Line="1" Column="1" />
+      <File FileName="Assets/Ant/Scripts/AntDemageBody.js" Line="1" Column="1" />
+      <File FileName="Assets/DestroyBullet.js" Line="3" Column="1" />
+      <File FileName="Assets/ShootPointFkt.js" Line="7" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

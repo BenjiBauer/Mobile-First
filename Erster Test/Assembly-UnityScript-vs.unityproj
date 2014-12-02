@@ -59,10 +59,12 @@
      <Compile Include="Assets\Ant\Scripts\BulletShoot.js" />
      <Compile Include="Assets\Ant\Scripts\DomeDamage.js" />
      <Compile Include="Assets\Ant\Scripts\HealthPoints.js" />
+     <Compile Include="Assets\Ant\Scripts\NewBulletShoot.js" />
      <Compile Include="Assets\Ant\Scripts\TankDamage.js" />
      <Compile Include="Assets\AntHealthBarFunction.js" />
      <Compile Include="Assets\ButtonFire.js" />
      <Compile Include="Assets\CameraFollow.js" />
+     <Compile Include="Assets\DestroyBullet.js" />
      <Compile Include="Assets\Disapear.js" />
      <Compile Include="Assets\FadenkreuzBewegen.js" />
      <Compile Include="Assets\ForcePointFkt.js" />
@@ -76,6 +78,7 @@
      <Compile Include="Assets\PowerAnzeige.js" />
      <Compile Include="Assets\Schuss.js" />
      <Compile Include="Assets\Shoot.js" />
+     <Compile Include="Assets\ShootPointFkt.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\CameraRelativeControl.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FirstPersonControl.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FollowTransform.js" />

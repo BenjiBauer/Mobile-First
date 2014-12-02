@@ -18,14 +18,14 @@ function Start () {
 }
   
 function Update () {
-     if (Input.GetMouseButton(0)&& shootingPower<MaxShootingPower) {
+     if (Input.GetMouseButton(0)&& shootingPower<MaxShootingPower &&alreadyShoot==false) {
      	shootingPower=shootingPower+shootingPowerSpeed;
      }
-     if (Input.GetMouseButtonUp(0)) {
+     if (Input.GetMouseButtonUp(0)&&alreadyShoot==false) {
          var pos = ShootingPointFunction.ShootPointPosition;
          //pos.z = transform.position.z - Camera.main.transform.position.z;
          //pos = Camera.main.ScreenToWorldPoint(pos);
-         
+
          var q = Quaternion.FromToRotation(Vector3.up, pos - transform.position);
          var go = Instantiate(prefab, transform.position, q);
          go.rigidbody2D.AddForce(go.transform.up * shootingPower);
@@ -35,5 +35,6 @@ function Update () {
      	shootingPower=0;
      	alreadyShoot=false;
      }
+     Debug.Log("ALREADYSHOOT: "+alreadyShoot);
  }
 

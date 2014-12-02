@@ -1,7 +1,7 @@
 ﻿#pragma strict
 private var realPowerText : GUIText;
 private var bullet1fkt : BulletShoot;
-private var bullet2fkt : NewShoot;
+private var bullet2fkt : BulletShoot;
 private var powerPercent : float = 0;
 private var bullet1obj : GameObject;
 private var bullet2obj : GameObject;
@@ -11,7 +11,7 @@ function Awake(){
 bullet1obj = GameObject.Find("bullet");
 bullet1fkt = bullet1obj.GetComponent(BulletShoot);
 bullet2obj = GameObject.Find("bullet2");
-bullet2fkt = bullet2obj.GetComponent(NewShoot);
+bullet2fkt = bullet2obj.GetComponent(BulletShoot);
 
 
 }

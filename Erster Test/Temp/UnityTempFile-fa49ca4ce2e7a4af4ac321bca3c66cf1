@@ -71,6 +71,7 @@
 'Assets/HPAnzeige.js'
 'Assets/MoveCamera.js'
 'Assets/NewRotatingGun.js'
+'Assets/NewRotatingGunRight.js'
 'Assets/NewShoot.js'
 'Assets/PinchZoom.js'
 'Assets/PowerAnzeige.js'

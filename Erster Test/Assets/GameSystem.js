@@ -17,6 +17,8 @@ private var bullet4Fkt : BulletShoot;
 private var bullet5Fkt : BulletShoot;
 private var bullet6Fkt : BulletShoot;
 
+public var bulletIsFlying : boolean = false;
+
 function Start () {
 
 	bullet1 = GameObject.Find("bullet1");
