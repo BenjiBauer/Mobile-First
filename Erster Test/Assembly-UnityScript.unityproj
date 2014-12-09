@@ -76,6 +76,7 @@
      <Compile Include="Assets\NewShoot.js" />
      <Compile Include="Assets\PinchZoom.js" />
      <Compile Include="Assets\PowerAnzeige.js" />
+     <Compile Include="Assets\RotateButtons.js" />
      <Compile Include="Assets\Schuss.js" />
      <Compile Include="Assets\Shoot.js" />
      <Compile Include="Assets\ShootPointFkt.js" />
@@ -91,7 +92,6 @@
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\SmoothFollow2D.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\ZoomCamera.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\tapcontrol.js" />
-     <Compile Include="Assets\TEST.js" />
      <Compile Include="Assets\tankHealthBarFunction.js" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />
