@@ -20,6 +20,12 @@ private var bullet6Fkt : NewBulletShoot;
 public var bulletIsFlying : boolean = false;
 public var bulletIsLanded : boolean = false;
 
+private var RotateButtons1Fkt : RotateButtons;
+private var RotateButtons2Fkt : RotateButtons;
+private var RotateButtons3Fkt : RotateButtons;
+private var RotateButtons4Fkt : RotateButtons;
+private var RotateButtons5Fkt : RotateButtons;
+private var RotateButtons6Fkt : RotateButtons;
 
 function Start () {
 
@@ -36,6 +42,14 @@ function Start () {
 	bullet4Fkt = bullet4.GetComponent(NewBulletShoot);
 	bullet5Fkt = bullet5.GetComponent(NewBulletShoot);
 	bullet6Fkt = bullet6.GetComponent(NewBulletShoot);
+	
+	RotateButtons1Fkt = bullet1.GetComponentInParent(RotateButtons);
+	RotateButtons2Fkt = bullet2.GetComponentInParent(RotateButtons);
+	RotateButtons3Fkt = bullet3.GetComponentInParent(RotateButtons);
+	RotateButtons4Fkt = bullet4.GetComponentInParent(RotateButtons);
+	RotateButtons5Fkt = bullet5.GetComponentInParent(RotateButtons);
+	RotateButtons6Fkt = bullet6.GetComponentInParent(RotateButtons);
+	
 	bullet2.active=false;
 	bullet3.active=false;
 	bullet4.active=false;
@@ -44,7 +58,7 @@ function Start () {
 }
 
 function Update () {
-	
+
 	if(bulletIsFlying==false && bullet1Fkt.ShootIsPressed==true&& bulletIsLanded==true){//Sobald Kugel gelandet ist
 		bullet2.active=true;//Wird aktiviert
 		bullet1.active=false;//Wird deaktiviert

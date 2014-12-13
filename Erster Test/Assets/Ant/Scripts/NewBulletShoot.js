@@ -16,6 +16,8 @@ public var buttonShootImage : Texture2D;
 public var buttonSize : int = 70;
 
 private var RotateButtonFkt : RotateButtons;
+
+private var mouseIsPressed : boolean = false; //für neue UI-Buttons um gedrückt halten zu können
      
 function Start () {
 	ShootingPointFunction=GetComponentInChildren(ShootPointFkt);
@@ -26,51 +28,32 @@ function Start () {
 }
   
 function Update () {
-    /* if (Input.GetMouseButton(0)&& shootingPower<MaxShootingPower &&alreadyShoot==false && GameSystemFkt.bulletIsFlying==false) {
-     	shootingPower=shootingPower+shootingPowerSpeed;//Lädt Power auf
-     }
-     if (Input.GetMouseButtonUp(0)&&alreadyShoot==false && GameSystemFkt.bulletIsFlying==false) {
-         var pos = ShootingPointFunction.ShootPointPosition;
-         //pos.z = transform.position.z - Camera.main.transform.position.z;
-         //pos = Camera.main.ScreenToWorldPoint(pos);
 
-         var q = Quaternion.FromToRotation(Vector3.up, pos - transform.position);
-         var go = Instantiate(prefab, transform.position, q);
-         go.rigidbody2D.AddForce(go.transform.up * shootingPower);
-         alreadyShoot=true;
-         ShootIsPressed=true;//wird von GameSystem zurück gestellt
-     }*/
     if(GameSystemFkt.bulletIsFlying==false && alreadyShoot==true){
      	shootingPower=0;
      	alreadyShoot=false;
      }
-     if(gameObject.active==true){
-     	RotateButtonFkt.enabled=true;
-     }
-     else{
-     	RotateButtonFkt.enabled=false;
-     }
-     //Funktion um Drehknöpfe zu aktivivieren
  }
  
- function OnGUI () {
 
-	if (GUI.Button(Rect(15,225,buttonSize,buttonSize),buttonShootImage)){//&&alreadyShoot==false && GameSystemFkt.bulletIsFlying==false) {
-         var pos = ShootingPointFunction.ShootPointPosition;
-         //pos.z = transform.position.z - Camera.main.transform.position.z;
-         //pos = Camera.main.ScreenToWorldPoint(pos);
-
-         var q = Quaternion.FromToRotation(Vector3.up, pos - transform.position);
-         var go = Instantiate(prefab, transform.position, q);
-         go.rigidbody2D.AddForce(go.transform.up * shootingPower);
-         alreadyShoot=true;
-         ShootIsPressed=true;//wird von GameSystem zurück gestellt
-     }
-     //Wenn ich Button gedrückt halte
-	 while (GUI.RepeatButton(Rect(15,155,buttonSize,buttonSize),buttonShootImage)){
+function ShooterPressed(){
+	mouseIsPressed=true;
+	if(mouseIsPressed==true){
 		if (shootingPower<MaxShootingPower &&alreadyShoot==false && GameSystemFkt.bulletIsFlying==false) {
-     		shootingPower=shootingPower+shootingPowerSpeed;//Lädt Power auf
-     	}
-	}	
+		     		shootingPower=shootingPower+shootingPowerSpeed;//Lädt Power auf
+			}
+	}
 }
 
+function ShooterReleased(){
+	mouseIsPressed=false;
+	 var pos = ShootingPointFunction.ShootPointPosition;
+	 //pos.z = transform.position.z - Camera.main.transform.position.z;
+	 //pos = Camera.main.ScreenToWorldPoint(pos);
+
+	 var q = Quaternion.FromToRotation(Vector3.up, pos - transform.position);
+	 var go = Instantiate(prefab, transform.position, q);
+	 go.rigidbody2D.AddForce(go.transform.up * shootingPower);
+	 alreadyShoot=true;
+	 ShootIsPressed=true;//wird von GameSystem zurück gestellt
+}

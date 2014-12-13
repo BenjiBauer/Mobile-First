@@ -14,13 +14,13 @@ function Awake () {
 function OnGUI () {
 
 	//Wenn ich hoch-Button klicke
-	while (GUI.RepeatButton(Rect(15,15,buttonSize,buttonSize),buttonTurnImageUp)){
+	while (GUI.RepeatButton(Rect(15,15,buttonSize,buttonSize),"UP")){
 		if(transform.rotation.z>maxAngleDown||transform.rotation.z<=maxAngleUp){
 			transform.rotation.z+=ButtonSpeed;
 		}
 	}
 	//Wenn ich runter-Button klicke
-	while (GUI.RepeatButton(Rect(15,85,buttonSize,buttonSize),buttonTurnImageDown)){
+	while (GUI.RepeatButton(Rect(15,85,buttonSize,buttonSize),"DOWN")){
 		if(transform.rotation.z>maxAngleDown||transform.rotation.z<=maxAngleUp){
 			transform.rotation.z-=ButtonSpeed;
 		}
