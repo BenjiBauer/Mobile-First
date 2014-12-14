@@ -1,5 +1,11 @@
 ﻿#pragma strict
 
+//Zahl der Ameisen
+public var numberOfAntsLeft : int = 3;
+public var numberOfAntsRight : int = 3;
+public var numberOfMovingAntsLeft : int = 5;
+public var numberOfMovingAntsRight : int = 5;
+
 //Standardwerte fuer Ameise
 public var HPvalue : float = 100;
 public var damageOnHead : float = 35;
@@ -58,7 +64,13 @@ function Start () {
 }
 
 function Update () {
-
+	
+	//Spielende
+	if(numberOfAntsLeft==0 || numberOfAntsRight==0){
+		Debug.Log("GAME OVER");
+	}
+	
+	//Bestimmt welcher Spieler dran ist
 	if(bulletIsFlying==false && bullet1Fkt.ShootIsPressed==true&& bulletIsLanded==true){//Sobald Kugel gelandet ist
 		bullet4.active=true;//Wird aktiviert
 		bullet1.active=false;//Wird deaktiviert

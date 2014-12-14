@@ -54,6 +54,8 @@
      <Compile Include="Assets\Ant Old Scripts\PowerbarFunctionAnt2.js" />
      <Compile Include="Assets\Ant Old Scripts\ant2HP.js" />
      <Compile Include="Assets\Ant Old Scripts\antHP.js" />
+     <Compile Include="Assets\Ant\Scripts\AntCounterLeft.js" />
+     <Compile Include="Assets\Ant\Scripts\AntCounterRight.js" />
      <Compile Include="Assets\Ant\Scripts\AntDemageBody.js" />
      <Compile Include="Assets\Ant\Scripts\AntRotating.js" />
      <Compile Include="Assets\Ant\Scripts\BulletShoot.js" />
@@ -71,6 +73,7 @@
      <Compile Include="Assets\GameSystem.js" />
      <Compile Include="Assets\HPAnzeige.js" />
      <Compile Include="Assets\MoveCamera.js" />
+     <Compile Include="Assets\Moving Ants\Scripts\HealthPointsMovingAnt.js" />
      <Compile Include="Assets\NewRotatingGun.js" />
      <Compile Include="Assets\NewRotatingGunRight.js" />
      <Compile Include="Assets\NewShoot.js" />

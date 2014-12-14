@@ -12,10 +12,6 @@ public  var ShootIsPressed : boolean = false; //Für GameSystem
 private var GameSystemObj : GameObject;
 private var GameSystemFkt : GameSystem;
 
-public var buttonShootImage : Texture2D;
-public var buttonSize : int = 70;
-
-private var RotateButtonFkt : RotateButtons;
 
 private var mouseIsPressed : boolean = false; //für neue UI-Buttons um gedrückt halten zu können
      
@@ -23,8 +19,6 @@ function Start () {
 	ShootingPointFunction=GetComponentInChildren(ShootPointFkt);
 	GameSystemObj=GameObject.Find("GameSystem");
 	GameSystemFkt=GameSystemObj.GetComponent(GameSystem);
-	RotateButtonFkt=GetComponentInParent(RotateButtons);
-	
 }
   
 function Update () {
