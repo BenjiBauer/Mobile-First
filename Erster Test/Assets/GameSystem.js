@@ -60,34 +60,34 @@ function Start () {
 function Update () {
 
 	if(bulletIsFlying==false && bullet1Fkt.ShootIsPressed==true&& bulletIsLanded==true){//Sobald Kugel gelandet ist
-		bullet2.active=true;//Wird aktiviert
+		bullet4.active=true;//Wird aktiviert
 		bullet1.active=false;//Wird deaktiviert
 		bulletIsLanded=false; //Wird zurück gestellt
 		bullet1Fkt.ShootIsPressed=false;//Weil es nicht mehr gedrückt wird
 	}
-	else if(bulletIsFlying==false && bullet2Fkt.ShootIsPressed==true&& bulletIsLanded==true){
-		bullet3.active=true;
-		bullet2.active=false;
-		bulletIsLanded=false;
-		bullet2Fkt.ShootIsPressed=false;
-	}
-	else if(bulletIsFlying==false && bullet3Fkt.ShootIsPressed==true&& bulletIsLanded==true){
-		bullet4.active=true;
-		bullet3.active=false;
-		bulletIsLanded=false;
-		bullet3Fkt.ShootIsPressed=false;
-	}
 	else if(bulletIsFlying==false && bullet4Fkt.ShootIsPressed==true&& bulletIsLanded==true){
-		bullet5.active=true;
+		bullet2.active=true;
 		bullet4.active=false;
 		bulletIsLanded=false;
 		bullet4Fkt.ShootIsPressed=false;
 	}
+	else if(bulletIsFlying==false && bullet2Fkt.ShootIsPressed==true&& bulletIsLanded==true){
+		bullet5.active=true;
+		bullet2.active=false;
+		bulletIsLanded=false;
+		bullet2Fkt.ShootIsPressed=false;
+	}
 	else if(bulletIsFlying==false && bullet5Fkt.ShootIsPressed==true&& bulletIsLanded==true){
-		bullet6.active=true;
+		bullet3.active=true;
 		bullet5.active=false;
 		bulletIsLanded=false;
 		bullet5Fkt.ShootIsPressed=false;
+	}
+	else if(bulletIsFlying==false && bullet3Fkt.ShootIsPressed==true&& bulletIsLanded==true){
+		bullet6.active=true;
+		bullet3.active=false;
+		bulletIsLanded=false;
+		bullet3Fkt.ShootIsPressed=false;
 	}
 	else if(bulletIsFlying==false && bullet6Fkt.ShootIsPressed==true&& bulletIsLanded==true){
 		bullet1.active=true;
