@@ -13,6 +13,5 @@ function Start () {
 function Update () {
 	if(HealthPointsFkt.antHealthPoints <=0){
 		GameSystemFkt.numberOfAntsRight-=1; //Stirbt die Ameise, so wird für das GameSystem eine Abgezogen.
-		Debug.Log("GSN: "+GameSystemFkt.numberOfAntsRight);
 	}
 }

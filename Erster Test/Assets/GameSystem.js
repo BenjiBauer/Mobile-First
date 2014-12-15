@@ -6,6 +6,10 @@ public var numberOfAntsRight : int = 3;
 public var numberOfMovingAntsLeft : int = 5;
 public var numberOfMovingAntsRight : int = 5;
 
+//Zahl des GessameltenKuchens
+public var numberOfCakeRight : int = 0;
+public var numberOfCakeLeft : int = 0;
+
 //Standardwerte fuer Ameise
 public var HPvalue : float = 100;
 public var damageOnHead : float = 35;
