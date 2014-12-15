@@ -13,5 +13,6 @@ function Start () {
 function Update () {
 	if(HealthPointsFkt.movingAntHealthPoints <=0){
 		GameSystemFkt.numberOfMovingAntsRight-=1; //Stirbt die Ameise, so wird für das GameSystem eine Abgezogen.
+		gameObject.active=false;
 	}
 }

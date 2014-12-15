@@ -73,12 +73,16 @@
      <Compile Include="Assets\GameSystem.js" />
      <Compile Include="Assets\GetCakeFunction.js" />
      <Compile Include="Assets\HPAnzeige.js" />
+     <Compile Include="Assets\HealthPointsMovingAntRight.js" />
      <Compile Include="Assets\KuchenAnzeigeFunktion.js" />
+     <Compile Include="Assets\LeftCakeFunction.js" />
      <Compile Include="Assets\MoveCamera.js" />
      <Compile Include="Assets\Moving Ants\Scripts\HealthPointsMovingAnt.js" />
+     <Compile Include="Assets\MovingAntCounterLeft.js" />
      <Compile Include="Assets\MovingAntCounterRight.js" />
      <Compile Include="Assets\MovingAntDamage.js" />
      <Compile Include="Assets\MovingAntHealthBarFunction.js" />
+     <Compile Include="Assets\MovingAntMovesLeft.js" />
      <Compile Include="Assets\MovingAntMovesRight.js" />
      <Compile Include="Assets\NewRotatingGun.js" />
      <Compile Include="Assets\NewRotatingGunRight.js" />
