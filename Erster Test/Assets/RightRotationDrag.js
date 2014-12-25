@@ -16,8 +16,8 @@
          
          if (touch.phase == TouchPhase.Moved)
          {
-             h = horozontalSpeed * touch.deltaPosition.x ;
-             transform.Rotate( 0, 0, -h, Space.World );
+            /* h = horozontalSpeed * touch.deltaPosition.x ;
+             transform.Rotate( 0, 0, -h, Space.World );*/
              
              v = verticalSpeed * touch.deltaPosition.y ;
              transform.Rotate( 0, 0, -v, Space.World );

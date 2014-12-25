@@ -78,6 +78,7 @@
 'Assets/HPAnzeige.js'
 'Assets/HealthPointsMovingAntRight.js'
 'Assets/KuchenAnzeigeFunktion.js'
+'Assets/LeftCakeFunction.js'
 'Assets/MoveCamera.js'
 'Assets/Moving Ants/Scripts/HealthPointsMovingAnt.js'
 'Assets/MovingAntCounterLeft.js'
