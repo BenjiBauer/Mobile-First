@@ -1,15 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/RotationDrag.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ButtonPlayerReady.js">
     <Files>
-      <File FileName="Assets/RotationDrag.js" Line="26" Column="8" />
-      <File FileName="Assets/KuchenAnzeigeFunktion.js" Line="1" Column="1" />
-      <File FileName="Assets/GameSystem.js" Line="30" Column="79" />
-      <File FileName="Assets/CameraFollow.js" Line="1" Column="1" />
-      <File FileName="Assets/Ant/Scripts/AntCounterLeft.js" Line="1" Column="1" />
-      <File FileName="Assets/Ant/Scripts/NewBulletShoot.js" Line="1" Column="1" />
-      <File FileName="Assets/DestroyBullet.js" Line="22" Column="38" />
-      <File FileName="Assets/RightRotationDrag.js" Line="20" Column="58" />
+      <File FileName="Assets/Timer.js" Line="18" Column="20" />
+      <File FileName="Assets/GameSystem.js" Line="211" Column="24" />
+      <File FileName="Assets/TEST.js" Line="1" Column="1" />
+      <File FileName="Assets/Ant/Scripts/HealthPoints.js" Line="1" Column="1" />
+      <File FileName="Assets/ButtonPlayerReady.js" Line="16" Column="8" />
+      <File FileName="Assets/RightCakeFunction.js" Line="8" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

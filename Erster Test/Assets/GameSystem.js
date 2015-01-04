@@ -11,8 +11,8 @@ public var numberOfCakeRight : int = 0;
 public var numberOfCakeLeft : int = 0;
 
 //Welcher Spieler
-private var player1 : boolean =false;
-private var player2 : boolean =false;
+public var player1 : boolean =false;
+public var player2 : boolean =false;
 private var subPlayer1 : int = 1;
 private var subPlayer2 : int = 1;
 
@@ -43,7 +43,15 @@ private var HP4Fkt : HealthPoints;
 private var HP5Fkt : HealthPoints;
 private var HP6Fkt : HealthPoints;
 
-private var Test : HealthPoints;
+//private var Test : HealthPoints;
+
+//Ist der Spieler bereit?
+public var playerIsReady : boolean = false;
+private var PlayerisReadyObj : GameObject; 
+
+//Zeit die Spieler hat
+public var PlayTime: int= 3000; //Zum verändern, in Sekunden mal 100
+private var TimeToPlay : int= PlayTime; //läuft ab
 
 function Start () {
 
@@ -74,8 +82,9 @@ function Start () {
 	bullet5.active=false;
 	bullet6.active=false;
 	
-	Test = bullet1.GetComponentInParent(HealthPoints);
+	//Test = bullet1.GetComponentInParent(HealthPoints);
 	player1=true;
+	PlayerisReadyObj = GameObject.Find("PlayerIsReady");
 }
 
 function Update () {
@@ -87,32 +96,34 @@ function Update () {
 	
 	//Bestimmt welcher Spieler dran ist
 	if(player1){
-		//Player1.1 ist dran
-		if(subPlayer1==1 && HP1Fkt.antHealthPoints>0){
-			bullet1.active=true;
-		}
-		else if(subPlayer1==1 && HP1Fkt.antHealthPoints<=0){
-			subPlayer1++;
-		}
-		//Player1.2 ist dran
-		else if(subPlayer1==2 && HP2Fkt.antHealthPoints>0){
-			bullet2.active=true;
-		}
-		else if(subPlayer1==2 && HP2Fkt.antHealthPoints<=0){
-			subPlayer1++;
-		}
-		//Player1.3 ist dran
-		else if(subPlayer1==3 && HP3Fkt.antHealthPoints>0){
-			bullet3.active=true;
-		}
-		else if(subPlayer1==3 && HP3Fkt.antHealthPoints<=0){
-			subPlayer1++;
+		if(playerIsReady){
+			//Player1.1 ist dran
+			if(subPlayer1==1 && HP1Fkt.antHealthPoints>0){
+				bullet1.active=true;
+			}
+			else if(subPlayer1==1 && HP1Fkt.antHealthPoints<=0){
+				subPlayer1++;
+			}
+			//Player1.2 ist dran
+			else if(subPlayer1==2 && HP2Fkt.antHealthPoints>0){
+				bullet2.active=true;
+			}
+			else if(subPlayer1==2 && HP2Fkt.antHealthPoints<=0){
+				subPlayer1++;
+			}
+			//Player1.3 ist dran
+			else if(subPlayer1==3 && HP3Fkt.antHealthPoints>0){
+				bullet3.active=true;
+			}
+			else if(subPlayer1==3 && HP3Fkt.antHealthPoints<=0){
+				subPlayer1++;
+			}
 		}
 		//Damit es wieder anfaengt
 		if(subPlayer1==4){
 			subPlayer1=1;
 		}
-		if(bulletIsFlying==false && bullet1Fkt.ShootIsPressed==true&& bulletIsLanded==true){//Sobald Kugel gelandet ist
+		if((bulletIsFlying==false && bullet1Fkt.ShootIsPressed==true&& bulletIsLanded==true)||TimeToPlay<=0){//Sobald Kugel gelandet ist
 			//bullet4.active=true;//Wird aktiviert
 			bullet1.active=false;//Wird deaktiviert
 			bulletIsLanded=false; //Wird zurück gestellt
@@ -120,8 +131,10 @@ function Update () {
 			player1=false;
 			player2=true;
 			subPlayer2++;
+			playerIsReady=false;
+			TimeToPlay=PlayTime;
 		}
-		else if(bulletIsFlying==false && bullet2Fkt.ShootIsPressed==true&& bulletIsLanded==true){
+		else if((bulletIsFlying==false && bullet2Fkt.ShootIsPressed==true&& bulletIsLanded==true)||TimeToPlay<=0){
 			//bullet5.active=true;
 			bullet2.active=false;
 			bulletIsLanded=false;
@@ -129,8 +142,10 @@ function Update () {
 			player1=false;
 			player2=true;
 			subPlayer2++;
+			playerIsReady=false;
+			TimeToPlay=PlayTime;
 		}	
-		else if(bulletIsFlying==false && bullet3Fkt.ShootIsPressed==true&& bulletIsLanded==true){
+		else if((bulletIsFlying==false && bullet3Fkt.ShootIsPressed==true&& bulletIsLanded==true)||TimeToPlay<=0){
 			//bullet6.active=true;
 			bullet3.active=false;
 			bulletIsLanded=false;
@@ -138,30 +153,34 @@ function Update () {
 			player1=false;
 			player2=true;
 			subPlayer2++;
+			playerIsReady=false;
+			TimeToPlay=PlayTime;
 		}
 	}
 	
 	if(player2){
 		//Player2.1 ist dran
-		if(subPlayer2==1 && HP4Fkt.antHealthPoints>0){
-			bullet4.active=true;
-		}
-		else if(subPlayer2==1 && HP4Fkt.antHealthPoints<=0){
-			subPlayer2++;
-		}
-		//Player2.2 ist dran
-		else if(subPlayer2==2 && HP5Fkt.antHealthPoints>0){
-			bullet5.active=true;
-		}
-		else if(subPlayer2==2 && HP5Fkt.antHealthPoints<=0){
-			subPlayer2++;
-		}
-		//Player2.3 ist dran
-		else if(subPlayer2==3 && HP6Fkt.antHealthPoints>0){
-			bullet6.active=true;
-		}
-		else if(subPlayer2==3 && HP6Fkt.antHealthPoints<=0){
-			subPlayer2++;
+		if(playerIsReady){
+			if(subPlayer2==1 && HP4Fkt.antHealthPoints>0){
+				bullet4.active=true;
+			}
+			else if(subPlayer2==1 && HP4Fkt.antHealthPoints<=0){
+				subPlayer2++;
+			}
+			//Player2.2 ist dran
+			else if(subPlayer2==2 && HP5Fkt.antHealthPoints>0){
+				bullet5.active=true;
+			}
+			else if(subPlayer2==2 && HP5Fkt.antHealthPoints<=0){
+				subPlayer2++;
+			}
+			//Player2.3 ist dran
+			else if(subPlayer2==3 && HP6Fkt.antHealthPoints>0){
+				bullet6.active=true;
+			}
+			else if(subPlayer2==3 && HP6Fkt.antHealthPoints<=0){
+				subPlayer2++;
+			}
 		}
 		
 		//Damit es wieder anfaengt
@@ -170,7 +189,7 @@ function Update () {
 		}
 		
 		//Player2.1 ist dran
-		if(bulletIsFlying==false && bullet4Fkt.ShootIsPressed==true&& bulletIsLanded==true){
+		if((bulletIsFlying==false && bullet4Fkt.ShootIsPressed==true&& bulletIsLanded==true)||TimeToPlay<=0){
 			//bullet2.active=true;
 			bullet4.active=false;
 			bulletIsLanded=false;
@@ -178,8 +197,10 @@ function Update () {
 			player1=true;
 			player2=false;
 			subPlayer1++;
+			playerIsReady=false;
+			TimeToPlay=PlayTime;
 		}
-		else if(bulletIsFlying==false && bullet5Fkt.ShootIsPressed==true&& bulletIsLanded==true){
+		else if((bulletIsFlying==false && bullet5Fkt.ShootIsPressed==true&& bulletIsLanded==true)||TimeToPlay<=0){
 			//bullet3.active=true;
 			bullet5.active=false;
 			bulletIsLanded=false;
@@ -187,8 +208,10 @@ function Update () {
 			player1=true;
 			player2=false;
 			subPlayer1++;
+			playerIsReady=false;
+			TimeToPlay=PlayTime;
 		}
-		else if(bulletIsFlying==false && bullet6Fkt.ShootIsPressed==true&& bulletIsLanded==true){
+		else if((bulletIsFlying==false && bullet6Fkt.ShootIsPressed==true&& bulletIsLanded==true)||TimeToPlay<=0){
 			//bullet1.active=true;
 			bullet6.active=false;
 			bulletIsLanded=false;
@@ -196,6 +219,8 @@ function Update () {
 			player1=true;
 			player2=false;
 			subPlayer1++;
+			playerIsReady=false;
+			TimeToPlay=PlayTime;
 		}
 	}
 	/*
@@ -225,5 +250,26 @@ function Update () {
 	}*/
 	//Debug.Log(Test.enabled);
 	
-	
+	ReadyQuestion();
+	if(playerIsReady){
+		TimeToPlayFkt();
+	}
+}
+
+function ReadyQuestion(){
+	if(playerIsReady){
+		PlayerisReadyObj.active=false;
+	}
+	else{
+		PlayerisReadyObj.active=true;
+	}
+
+}
+
+function TimeToPlayFkt(){
+	if(bulletIsFlying==false){
+		TimeToPlay-=Time.deltaTime;
+	}
+	Debug.Log(TimeToPlay);
+
 }

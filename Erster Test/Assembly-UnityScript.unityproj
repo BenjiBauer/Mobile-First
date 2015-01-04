@@ -65,6 +65,7 @@
      <Compile Include="Assets\Ant\Scripts\TankDamage.js" />
      <Compile Include="Assets\AntHealthBarFunction.js" />
      <Compile Include="Assets\ButtonFire.js" />
+     <Compile Include="Assets\ButtonPlayerReady.js" />
      <Compile Include="Assets\CameraFollow.js" />
      <Compile Include="Assets\DestroyBullet.js" />
      <Compile Include="Assets\Disapear.js" />
@@ -110,6 +111,8 @@
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\ZoomCamera.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\tapcontrol.js" />
      <Compile Include="Assets\TEST.js" />
+     <Compile Include="Assets\TextPlayerReady.js" />
+     <Compile Include="Assets\Timer.js" />
      <Compile Include="Assets\tankHealthBarFunction.js" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />
