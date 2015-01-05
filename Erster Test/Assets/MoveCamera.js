@@ -15,9 +15,9 @@ private	var firstTouch : boolean = false;
 	
 		if (Input.touchCount == 2){
 			if(firstTouch==false){
-					hit_position = Input.GetTouch(0).position;
-					camera_position = transform.position;
-					firstTouch=true;
+				hit_position = Input.GetTouch(0).position;
+				camera_position = transform.position;
+				firstTouch=true;
 					
 			}
 				current_position = Input.GetTouch(0).position;

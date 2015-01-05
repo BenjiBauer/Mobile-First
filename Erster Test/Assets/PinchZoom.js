@@ -2,13 +2,21 @@
 
 public var perspectiveZoomSpeed : float = 0.5f;        // The rate of change of the field of view in perspective mode.
 public var orthoZoomSpeed : float = 0.5f;        // The rate of change of the orthographic size in orthographic mode.
+public var minZoom : float = 160; //Minmaler Zoomwert
+public var maxZoom : float = 50; //Minmaler Zoomwert
 
+private var CameraFollowFkt : CameraFollow;
+
+function Start(){
+	CameraFollowFkt=GetComponent(CameraFollow);
+}
 
 function Update()
 {
     // If there are two touches on the device...
     if (Input.touchCount == 2)
     {
+    	CameraFollowFkt.pinchOrZoom=true;
         // Store both touches.
         var touchZero = Input.GetTouch(0);
         var touchOne = Input.GetTouch(1);
@@ -40,6 +48,12 @@ function Update()
 
             // Clamp the field of view to make sure it's between 0 and 180.
             camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, 0.1f, 179.9f);
+        }
+        if(camera.orthographicSize>=minZoom){
+        	camera.orthographicSize=minZoom;
+        }
+        else if(camera.orthographicSize<=maxZoom){
+        	camera.orthographicSize=maxZoom;
         }
     }
 }

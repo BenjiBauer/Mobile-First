@@ -51,7 +51,8 @@ private var PlayerisReadyObj : GameObject;
 
 //Zeit die Spieler hat
 public var PlayTime: int= 3000; //Zum verändern, in Sekunden mal 100
-private var TimeToPlay : int= PlayTime; //läuft ab
+public var TimeToPlay : int= PlayTime; //läuft ab
+
 
 function Start () {
 
@@ -92,6 +93,12 @@ function Update () {
 	//Spielende
 	if(numberOfAntsLeft==0 || numberOfAntsRight==0){
 		Debug.Log("GAME OVER");
+		if(numberOfAntsLeft==0){
+			Debug.Log("PLAYER2 WON!");
+		}
+		else if(numberOfAntsRight==0){
+			Debug.Log("PLAYER1 WON!");
+		}
 	}
 	
 	//Bestimmt welcher Spieler dran ist
@@ -270,6 +277,4 @@ function TimeToPlayFkt(){
 	if(bulletIsFlying==false){
 		TimeToPlay-=Time.deltaTime;
 	}
-	Debug.Log(TimeToPlay);
-
 }
