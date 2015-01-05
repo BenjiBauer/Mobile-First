@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-public var movingAntHealthPoints : int = 100;
+public var movingAntHealthPoints : float = 100;
 private var GameSystemObj : GameObject;
 private var GameSystemFkt : GameSystem;
 

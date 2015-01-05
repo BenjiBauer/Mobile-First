@@ -7,6 +7,9 @@
 	private var GetCakeFkt : GetCakeFunction;
 	private var GameSystemObj : GameObject;
 	private var GameSystemFkt : GameSystem;
+	private var HealthPointsFkt : HealthPointsMovingAnt;
+	private var LastChange : float = 100; //Damit Geschwindigkeit nur einmal abgezogen wird.
+	public var MinSpeed : float = 4;
 	
 function Start(){
 	Cake = Vector3(0,-24.2,0); //Ziel des Kuchens
@@ -16,6 +19,7 @@ function Start(){
 	GameSystemObj=GameObject.Find("GameSystem");
 	GameSystemFkt=GameSystemObj.GetComponent(GameSystem);
 	StartMoveSpeed=MoveSpeed;
+	HealthPointsFkt=GetComponentInParent(HealthPointsMovingAnt);
 }
 			
 function Update () {
@@ -40,5 +44,16 @@ function Update () {
 			MoveSpeed=StartMoveSpeed;
 		}*/
 		transform.position = Vector3.MoveTowards(transform.position, target, step);
-		
+		SpeedAndDamage();//Ant get slower if it got less healthpoints
 	}
+	
+function SpeedAndDamage(){
+	if(LastChange!=HealthPointsFkt.movingAntHealthPoints){
+		MoveSpeed=StartMoveSpeed*(HealthPointsFkt.movingAntHealthPoints/100);
+		LastChange=HealthPointsFkt.movingAntHealthPoints;
+		if(MoveSpeed<=MinSpeed){
+				MoveSpeed=MinSpeed;
+		}
+		Debug.Log("SPE:"+MoveSpeed);
+	}
+}
