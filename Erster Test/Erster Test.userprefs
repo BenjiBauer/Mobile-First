@@ -1,12 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MovingAntMovesLeft.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Moving Ants/Scripts/MovingAntBodyDamage.js">
     <Files>
-      <File FileName="Assets/GameSystem.js" Line="268" Column="1" />
+      <File FileName="Assets/Moving Ants/Scripts/MovingAntBodyDamage.js" Line="3" Column="50" />
+      <File FileName="Assets/GameSystem.js" Line="1" Column="1" />
       <File FileName="Assets/TEST.js" Line="1" Column="1" />
-      <File FileName="Assets/MovingAntMovesLeft.js" Line="12" Column="34" />
-      <File FileName="Assets/Moving Ants/Scripts/HealthPointsMovingAnt.js" Line="3" Column="41" />
-      <File FileName="Assets/MovingAntMovesRight.js" Line="12" Column="1" />
+      <File FileName="Assets/Moving Ants/Scripts/HealthPointsMovingAnt.js" Line="1" Column="1" />
+      <File FileName="Assets/Moving Ants/Scripts/MovingAntDamage.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
