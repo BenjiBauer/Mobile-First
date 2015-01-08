@@ -91,15 +91,7 @@ function Start () {
 function Update () {
 	
 	//Spielende
-	if(numberOfAntsLeft==0 || numberOfAntsRight==0){
-		Debug.Log("GAME OVER");
-		if(numberOfAntsLeft==0){
-			Debug.Log("PLAYER2 WON!");
-		}
-		else if(numberOfAntsRight==0){
-			Debug.Log("PLAYER1 WON!");
-		}
-	}
+	GameOver();
 	
 	//Bestimmt welcher Spieler dran ist
 	if(player1){
@@ -276,5 +268,21 @@ function ReadyQuestion(){
 function TimeToPlayFkt(){
 	if(bulletIsFlying==false){
 		TimeToPlay-=Time.deltaTime;
+	}
+}
+
+function GameOver(){
+	if(numberOfAntsLeft==0 || numberOfAntsRight==0){
+		Debug.Log("GAME OVER");
+		Time.timeScale=0;
+		if(numberOfCakeRight>numberOfCakeLeft){
+			Debug.Log("PLAYER2 WON!");
+		}
+		else if(numberOfCakeLeft>numberOfCakeRight){
+			Debug.Log("PLAYER1 WON!");
+		}
+		else if(numberOfCakeLeft==numberOfCakeRight){
+			Debug.Log("NO PLAYER WON");
+		}
 	}
 }
