@@ -91,6 +91,7 @@
      <Compile Include="Assets\NewShoot.js" />
      <Compile Include="Assets\PinchZoom.js" />
      <Compile Include="Assets\PowerAnzeige.js" />
+     <Compile Include="Assets\PowerBarRadius.js" />
      <Compile Include="Assets\RightAntInCake.js" />
      <Compile Include="Assets\RightCakeFunction.js" />
      <Compile Include="Assets\RightRotationDrag.js" />
@@ -98,6 +99,7 @@
      <Compile Include="Assets\RotationDrag.js" />
      <Compile Include="Assets\Schuss.js" />
      <Compile Include="Assets\Shoot.js" />
+     <Compile Include="Assets\ShootBarHide.js" />
      <Compile Include="Assets\ShootPointFkt.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\CameraRelativeControl.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FirstPersonControl.js" />
