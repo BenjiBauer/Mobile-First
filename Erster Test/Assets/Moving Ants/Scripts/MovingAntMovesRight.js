@@ -35,8 +35,10 @@ function Update () {
 		else if(transform.position == Home){
 			target=Cake;
 			transform.localScale.x*=-1;
+			if(GetCakeFkt.GotCake==true){
+				GameSystemFkt.numberOfCakeRight+=1;//Kuchen wird abgelegt
+			}
 			GetCakeFkt.GotCake=false;
-			GameSystemFkt.numberOfCakeRight+=1;//Kuchen wird abgelegt
 		}
 		
 /*		//Bei Treffer FUNKTIONIRT NOCH NICHT
