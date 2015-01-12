@@ -1,16 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Moving Ants/Scripts/MovingAntMovesLeft.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/RightRotationDrag.js">
     <Files>
-      <File FileName="Assets/Moving Ants/Scripts/MovingAntMovesRight.js" Line="38" Column="4" />
-      <File FileName="Assets/GetCakeFunction.js" Line="18" Column="28" />
-      <File FileName="Assets/Moving Ants/Scripts/MovingAntBodyDamage.js" Line="14" Column="1" />
-      <File FileName="Assets/Moving Ants/Scripts/MovingAntMovesLeft.js" Line="39" Column="35" />
+      <File FileName="Assets/RotationDrag.js" Line="52" Column="3" />
+      <File FileName="Assets/KuchenAnzeigeFunktion.js" Line="7" Column="1" />
+      <File FileName="Assets/GameSystem.js" Line="37" Column="26" />
+      <File FileName="Assets/RightRotationDrag.js" Line="51" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/Benji/Documents/Uni/3. Semester/Mobile First/Entwicklung/Mobile-First/Erster Test/Assets/RotationDrag.js" line="28" />
+      <Breakpoint file="/Users/Benji/Documents/Uni/3. Semester/Mobile First/Entwicklung/Mobile-First/Erster Test/Assets/RotationDrag.js" line="47" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
