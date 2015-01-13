@@ -99,20 +99,35 @@ function Update () {
 			//Player1.1 ist dran
 			if(subPlayer1==1 && HP1Fkt.antHealthPoints>0){
 				bullet1.active=true;
+				bullet2.active=false;
+				bullet3.active=false;
+				bullet4.active=false;
+				bullet5.active=false;
+				bullet6.active=false;
 			}
 			else if(subPlayer1==1 && HP1Fkt.antHealthPoints<=0){
 				subPlayer1++;
 			}
 			//Player1.2 ist dran
 			else if(subPlayer1==2 && HP2Fkt.antHealthPoints>0){
+				bullet1.active=false;
 				bullet2.active=true;
+				bullet3.active=false;
+				bullet4.active=false;
+				bullet5.active=false;
+				bullet6.active=false;
 			}
 			else if(subPlayer1==2 && HP2Fkt.antHealthPoints<=0){
 				subPlayer1++;
 			}
 			//Player1.3 ist dran
 			else if(subPlayer1==3 && HP3Fkt.antHealthPoints>0){
+				bullet1.active=false;
+				bullet2.active=false;
 				bullet3.active=true;
+				bullet4.active=false;
+				bullet5.active=false;
+				bullet6.active=false;
 			}
 			else if(subPlayer1==3 && HP3Fkt.antHealthPoints<=0){
 				subPlayer1++;
@@ -122,6 +137,7 @@ function Update () {
 		if(subPlayer1==4){
 			subPlayer1=1;
 		}
+		
 		if((bulletIsFlying==false && bullet1Fkt.ShootIsPressed==true&& bulletIsLanded==true)||TimeToPlay<=0){//Sobald Kugel gelandet ist
 			//bullet4.active=true;//Wird aktiviert
 			bullet1.active=false;//Wird deaktiviert
@@ -161,20 +177,35 @@ function Update () {
 		//Player2.1 ist dran
 		if(playerIsReady){
 			if(subPlayer2==1 && HP4Fkt.antHealthPoints>0){
+				bullet1.active=false;
+				bullet2.active=false;
+				bullet3.active=false;
 				bullet4.active=true;
+				bullet5.active=false;
+				bullet6.active=false;
 			}
 			else if(subPlayer2==1 && HP4Fkt.antHealthPoints<=0){
 				subPlayer2++;
 			}
 			//Player2.2 ist dran
 			else if(subPlayer2==2 && HP5Fkt.antHealthPoints>0){
+				bullet1.active=false;
+				bullet2.active=false;
+				bullet3.active=false;
+				bullet4.active=false;
 				bullet5.active=true;
+				bullet6.active=false;
 			}
 			else if(subPlayer2==2 && HP5Fkt.antHealthPoints<=0){
 				subPlayer2++;
 			}
 			//Player2.3 ist dran
 			else if(subPlayer2==3 && HP6Fkt.antHealthPoints>0){
+				bullet1.active=false;
+				bullet2.active=false;
+				bullet3.active=false;
+				bullet4.active=false;
+				bullet5.active=false;
 				bullet6.active=true;
 			}
 			else if(subPlayer2==3 && HP6Fkt.antHealthPoints<=0){
