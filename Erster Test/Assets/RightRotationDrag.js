@@ -11,10 +11,12 @@
  
  private var GameSystemObj : GameObject;
  private var GameSystemFkt : GameSystem;
+ private var AnimationFkt : Animator;
  
  function Start () {
 	GameSystemObj=GameObject.Find("GameSystem");
 	GameSystemFkt=GameSystemObj.GetComponent(GameSystem);
+	AnimationFkt=GetComponent(Animator);
  }
  
  function Update()
@@ -47,5 +49,8 @@
  
  function MoveToNormalRotation(){
 		var angle : float = Mathf.MoveTowardsAngle(transform.eulerAngles.z, StandardRotationPos, RotationSpeed * Time.deltaTime);
-		transform.eulerAngles = Vector3(0, 0, angle);	
+		transform.eulerAngles = Vector3(0, 0, angle);
+		if(transform.eulerAngles.z<=StandardRotationPos+2){
+			AnimationFkt.enabled=true;	
+		}	
  }
