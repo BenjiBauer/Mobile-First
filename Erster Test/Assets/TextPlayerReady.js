@@ -8,7 +8,8 @@ private var ThisText : UI.Text;
 function Start () {
 	GameSystemObj=GameObject.Find("GameSystem");
 	GameSystemFkt=GameSystemObj.GetComponent(GameSystem);
-	ThisText = GetComponent(UI.Text);
+	var Obj = GameObject.Find("ReadyText");
+	ThisText = Obj.GetComponent(UI.Text);
 }
 
 function Update () {

@@ -50,9 +50,19 @@ public var playerIsReady : boolean = false;
 private var PlayerisReadyObj : GameObject; 
 
 //Zeit die Spieler hat
-public var PlayTime: int= 3000; //Zum verändern, in Sekunden mal 100
-public var TimeToPlay : int= PlayTime; //läuft ab
+public var PlayTime: float= 3000; //Zum verändern, in Sekunden mal 100
+public var TimeToPlay : float= PlayTime; //läuft ab
 
+//Zeitanzeige
+private var TimeCircleObj : GameObject;
+private var TimeCircle : UI.Image;
+private var TimeTextObj : GameObject;
+private var TimeText : UI.Text;
+
+//Game Over Anzeige
+private var GameOverTitelObj : GameObject;
+private var PlayerWonTextObj : GameObject;
+private var PlayerWonTextText : UI.Text;
 
 function Start () {
 
@@ -86,6 +96,17 @@ function Start () {
 	//Test = bullet1.GetComponentInParent(HealthPoints);
 	player1=true;
 	PlayerisReadyObj = GameObject.Find("PlayerIsReady");
+	
+	TimeCircleObj=GameObject.Find("Zeitanzeige");
+	TimeCircle=TimeCircleObj.GetComponent(UI.Image);
+	TimeTextObj=GameObject.Find("ZeitanzeigeText");
+	TimeText=TimeTextObj.GetComponent(UI.Text);
+	
+	GameOverTitelObj=GameObject.Find("GameOverTitel");
+	PlayerWonTextObj=GameObject.Find("PlayerWonText");
+	PlayerWonTextText= PlayerWonTextObj.GetComponent(UI.Text);
+	
+	GameOverTitelObj.active=false;
 }
 
 function Update () {
@@ -279,11 +300,12 @@ function Update () {
 		bullet6Fkt.ShootIsPressed=false;
 	}*/
 	//Debug.Log(Test.enabled);
-	
+	TimeToText();
 	ReadyQuestion();
 	if(playerIsReady){
 		TimeToPlayFkt();
 	}
+
 }
 
 function ReadyQuestion(){
@@ -306,14 +328,24 @@ function GameOver(){
 	if(numberOfAntsLeft==0 || numberOfAntsRight==0){
 		Debug.Log("GAME OVER");
 		Time.timeScale=0;
+		GameOverTitelObj.active=true;
 		if(numberOfCakeRight>numberOfCakeLeft){
 			Debug.Log("PLAYER2 WON!");
+			PlayerWonTextText.text="Player 2 won!";
 		}
 		else if(numberOfCakeLeft>numberOfCakeRight){
 			Debug.Log("PLAYER1 WON!");
+			PlayerWonTextText.text="Player 1 won!";
 		}
 		else if(numberOfCakeLeft==numberOfCakeRight){
 			Debug.Log("NO PLAYER WON");
+			PlayerWonTextText.text="Draw!";
 		}
 	}
+}
+
+function TimeToText(){
+	TimeCircle.fillAmount=TimeToPlay/PlayTime;
+	var zeit : int = TimeToPlay;
+	TimeText.text=zeit.ToString();
 }

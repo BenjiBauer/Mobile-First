@@ -1,12 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameSystem.js">
     <Files>
-      <File FileName="Assets/GameSystem.js" Line="206" Column="26" />
+      <File FileName="Assets/GameSystem.js" Line="96" Column="1" />
       <File FileName="Assets/RotationDrag.js" Line="1" Column="1" />
       <File FileName="Assets/KuchenAnzeigeFunktion.js" Line="1" Column="1" />
-      <File FileName="Assets/RightRotationDrag.js" Line="51" Column="3" />
+      <File FileName="Assets/RightRotationDrag.js" Line="1" Column="1" />
       <File FileName="Assets/ButtonPlayerReady.js" Line="1" Column="1" />
+      <File FileName="Assets/TextPlayerReady.js" Line="11" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
