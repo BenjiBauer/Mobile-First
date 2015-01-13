@@ -77,7 +77,7 @@ function Update () {
 		//CamTrans.position.x=bullet1Trans.position.x+OffsetCameraX;
 		if(pinchOrZoom==false){
 			CamTrans.position = Vector3.MoveTowards(CamTrans.position,bullet1Trans.position, CameraMovetoPlayer*Time.smoothDeltaTime);
-			CamTrans.position.z=-10;
+			CamTrans.position.z=-100;
 			CamCamera.orthographicSize=Mathf.MoveTowards(CamCamera.orthographicSize,90,CameraZoomtoPlayer*Time.smoothDeltaTime);
 		}
 	}
@@ -85,41 +85,41 @@ function Update () {
 		//CamTrans.position.x=bullet2Trans.position.x+OffsetCameraX;
 		if(pinchOrZoom==false){
 			CamTrans.position = Vector3.MoveTowards(CamTrans.position,bullet2Trans.position, CameraMovetoPlayer*Time.smoothDeltaTime);
-			CamTrans.position.z=-10;
+			CamTrans.position.z=-100;
 			CamCamera.orthographicSize=Mathf.MoveTowards(CamCamera.orthographicSize,90,CameraZoomtoPlayer*Time.smoothDeltaTime);
 		}
 	}
 	else if(bullet3.active==true&&GameSystemFkt.bulletIsFlying==false){
 		if(pinchOrZoom==false){
 			CamTrans.position = Vector3.MoveTowards(CamTrans.position,bullet3Trans.position, CameraMovetoPlayer*Time.smoothDeltaTime);
-			CamTrans.position.z=-10;
+			CamTrans.position.z=-100;
 			CamCamera.orthographicSize=Mathf.MoveTowards(CamCamera.orthographicSize,90,CameraZoomtoPlayer*Time.smoothDeltaTime);
 		}
 	}
 	else if(bullet4.active==true&&GameSystemFkt.bulletIsFlying==false){
 		if(pinchOrZoom==false){
 			CamTrans.position = Vector3.MoveTowards(CamTrans.position,bullet4Trans.position, CameraMovetoPlayer*Time.smoothDeltaTime);
-			CamTrans.position.z=-10;
+			CamTrans.position.z=-100;
 			CamCamera.orthographicSize=Mathf.MoveTowards(CamCamera.orthographicSize,90,CameraZoomtoPlayer*Time.smoothDeltaTime);
 		}
 	}
 	else if(bullet5.active==true&&GameSystemFkt.bulletIsFlying==false){
 		if(pinchOrZoom==false){
 			CamTrans.position = Vector3.MoveTowards(CamTrans.position,bullet5Trans.position, CameraMovetoPlayer*Time.smoothDeltaTime);
-			CamTrans.position.z=-10;
+			CamTrans.position.z=-100;
 			CamCamera.orthographicSize=Mathf.MoveTowards(CamCamera.orthographicSize,90,CameraZoomtoPlayer*Time.smoothDeltaTime);
 		}
 	}
 	else if(bullet6.active==true&&GameSystemFkt.bulletIsFlying==false){
 		if(pinchOrZoom==false){
 			CamTrans.position = Vector3.MoveTowards(CamTrans.position,bullet6Trans.position, CameraMovetoPlayer*Time.smoothDeltaTime);
-			CamTrans.position.z=-10;
+			CamTrans.position.z=-100;
 			CamCamera.orthographicSize=Mathf.MoveTowards(CamCamera.orthographicSize,90,CameraZoomtoPlayer*Time.smoothDeltaTime);
 		}
 	}
 	if(GameSystemFkt.bulletIsFlying==true){
 		CamCamera.orthographicSize=Mathf.MoveTowards(CamCamera.orthographicSize,150,CameraMoveAwayPlayer*Time.smoothDeltaTime);
-		CamTrans.position = Vector3.MoveTowards(CamTrans.position,Vector3(0,0,-10), CameraZoomAwayPlayer*Time.smoothDeltaTime);
+		CamTrans.position = Vector3.MoveTowards(CamTrans.position,Vector3(0,0,-100), CameraZoomAwayPlayer*Time.smoothDeltaTime);
 		pinchOrZoom=false; //Zurücksetzten, da sonst die Kamera nicht zur nächsten geht
 	}
 	if(GameSystemFkt.TimeToPlay<=0){//Zurücksetzten, falls nicht gespielt wird.
