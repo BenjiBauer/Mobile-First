@@ -13,6 +13,12 @@
  private var GameSystemFkt : GameSystem;
  private var AnimationFkt : Animator;
  
+  	public var rotationOffset : int  = 180; //Da es spiegelverkehrt ist!
+	private var powercalcuting : boolean = false;
+	private var mouseposition = Vector2();
+	private var difference = Vector3();
+	private var rotZ : float;
+ 
  function Start () {
 	GameSystemObj=GameObject.Find("GameSystem");
 	GameSystemFkt=GameSystemObj.GetComponent(GameSystem);
@@ -45,6 +51,18 @@
      PlayerIsMoving=true;//Damit Ameise sich während des justierens nicht zurück dreht
      	 
  	}
+ }
+ 
+ function RotationByDraggingPointToMouse(){
+ 		mouseposition = Camera.main.ScreenToWorldPoint(new Vector3 (Input.mousePosition.x,Input.mousePosition.y,0));
+
+		//Wärend man gedrückt hält soll die Kanone sich nicht verstellen, und nicht nach hinten Schießen
+			difference = Camera.main.ScreenToWorldPoint(Input.mousePosition)-transform.position;
+			difference.Normalize();
+			
+			rotZ = Mathf.Atan2 (difference.y,difference.x)*Mathf.Rad2Deg;
+			transform.rotation = Quaternion.Euler (0, 0, rotZ+rotationOffset);
+			PlayerIsMoving=true;//Damit Ameise sich während des justierens nicht zurück dreht
  }
  
  function MoveToNormalRotation(){
