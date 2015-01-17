@@ -12,6 +12,8 @@ public  var ShootIsPressed : boolean = false; //Für GameSystem
 private var GameSystemObj : GameObject;
 private var GameSystemFkt : GameSystem;
 
+public var shotSound : AudioClip;
+
 
 private var mouseIsPressed : boolean = false; //für neue UI-Buttons um gedrückt halten zu können
      
@@ -50,4 +52,5 @@ function ShooterReleased(){
 	 go.rigidbody2D.AddForce(go.transform.up * shootingPower);
 	 alreadyShoot=true;
 	 ShootIsPressed=true;//wird von GameSystem zurück gestellt
+	 audio.PlayOneShot(shotSound);
 }
