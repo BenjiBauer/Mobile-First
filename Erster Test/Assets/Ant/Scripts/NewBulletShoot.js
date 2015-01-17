@@ -34,7 +34,7 @@ function Update () {
 
 function ShooterPressed(){
 	mouseIsPressed=true;
-	if(mouseIsPressed==true){
+	if(mouseIsPressed==true &&GameSystemFkt.bulletIsLanded==false && GameSystemFkt.bulletIsFlying==false){
 		if (shootingPower<MaxShootingPower &&alreadyShoot==false && GameSystemFkt.bulletIsFlying==false) {
 		     		shootingPower=shootingPower+shootingPowerSpeed;//Lädt Power auf
 			}
@@ -42,15 +42,19 @@ function ShooterPressed(){
 }
 
 function ShooterReleased(){
-	mouseIsPressed=false;
-	 var pos = ShootingPointFunction.ShootPointPosition;
-	 //pos.z = transform.position.z - Camera.main.transform.position.z;
-	 //pos = Camera.main.ScreenToWorldPoint(pos);
 
-	 var q = Quaternion.FromToRotation(Vector3.up, pos - transform.position);
-	 var go = Instantiate(prefab, transform.position, q);
-	 go.rigidbody2D.AddForce(go.transform.up * shootingPower);
-	 alreadyShoot=true;
-	 ShootIsPressed=true;//wird von GameSystem zurück gestellt
-	 audio.PlayOneShot(shotSound);
+	if(GameSystemFkt.bulletIsLanded==false && GameSystemFkt.bulletIsFlying==false){
+		mouseIsPressed=false;
+		 var pos = ShootingPointFunction.ShootPointPosition;
+		 //pos.z = transform.position.z - Camera.main.transform.position.z;
+		 //pos = Camera.main.ScreenToWorldPoint(pos);
+
+		 var q = Quaternion.FromToRotation(Vector3.up, pos - transform.position);
+		 var go = Instantiate(prefab, transform.position, q);
+		 go.rigidbody2D.AddForce(go.transform.up * shootingPower);
+		 alreadyShoot=true;
+		 ShootIsPressed=true;//wird von GameSystem zurück gestellt
+		 audio.PlayOneShot(shotSound);
+	 }
 }
+

@@ -52,6 +52,8 @@ private var PlayerisReadyObj : GameObject;
 //Zeit die Spieler hat
 public var PlayTime: float= 3000; //Zum verändern, in Sekunden mal 100
 public var TimeToPlay : float= PlayTime; //läuft ab
+public var WaitTime : float = 200;//Zum verändern, solange warten bis Menü kommt
+public var WaitTimeRun : float = WaitTime;//Zum verändern, solange warten bis Menü kommt
 
 //Zeitanzeige
 private var TimeCircleObj : GameObject;
@@ -159,7 +161,7 @@ function Update () {
 			subPlayer1=1;
 		}
 		
-		if((bulletIsFlying==false && bullet1Fkt.ShootIsPressed==true&& bulletIsLanded==true)||TimeToPlay<=0){//Sobald Kugel gelandet ist
+		if((bulletIsFlying==false && bullet1Fkt.ShootIsPressed==true&& bulletIsLanded==true && WaitTimeRun<=0)||TimeToPlay<=0){//Sobald Kugel gelandet ist
 			//bullet4.active=true;//Wird aktiviert
 			bullet1.active=false;//Wird deaktiviert
 			bulletIsLanded=false; //Wird zurück gestellt
@@ -169,8 +171,9 @@ function Update () {
 			subPlayer2++;
 			playerIsReady=false;
 			TimeToPlay=PlayTime;
+			WaitTimeRun=WaitTime; //Wird zurückgesetzt
 		}
-		else if((bulletIsFlying==false && bullet2Fkt.ShootIsPressed==true&& bulletIsLanded==true)||TimeToPlay<=0){
+		else if((bulletIsFlying==false && bullet2Fkt.ShootIsPressed==true&& bulletIsLanded==true&& WaitTimeRun<=0)||TimeToPlay<=0){
 			//bullet5.active=true;
 			bullet2.active=false;
 			bulletIsLanded=false;
@@ -180,8 +183,9 @@ function Update () {
 			subPlayer2++;
 			playerIsReady=false;
 			TimeToPlay=PlayTime;
+			WaitTimeRun=WaitTime; //Wird zurückgesetzt
 		}	
-		else if((bulletIsFlying==false && bullet3Fkt.ShootIsPressed==true&& bulletIsLanded==true)||TimeToPlay<=0){
+		else if((bulletIsFlying==false && bullet3Fkt.ShootIsPressed==true&& bulletIsLanded==true&& WaitTimeRun<=0)||TimeToPlay<=0){
 			//bullet6.active=true;
 			bullet3.active=false;
 			bulletIsLanded=false;
@@ -191,6 +195,7 @@ function Update () {
 			subPlayer2++;
 			playerIsReady=false;
 			TimeToPlay=PlayTime;
+			WaitTimeRun=WaitTime; //Wird zurückgesetzt
 		}
 	}
 	
@@ -240,7 +245,7 @@ function Update () {
 		}
 		
 		//Player2.1 ist dran
-		if((bulletIsFlying==false && bullet4Fkt.ShootIsPressed==true&& bulletIsLanded==true)||TimeToPlay<=0){
+		if((bulletIsFlying==false && bullet4Fkt.ShootIsPressed==true&& bulletIsLanded==true&& WaitTimeRun<=0)||TimeToPlay<=0){
 			//bullet2.active=true;
 			bullet4.active=false;
 			bulletIsLanded=false;
@@ -250,8 +255,9 @@ function Update () {
 			subPlayer1++;
 			playerIsReady=false;
 			TimeToPlay=PlayTime;
+			WaitTimeRun=WaitTime; //Wird zurückgesetzt
 		}
-		else if((bulletIsFlying==false && bullet5Fkt.ShootIsPressed==true&& bulletIsLanded==true)||TimeToPlay<=0){
+		else if((bulletIsFlying==false && bullet5Fkt.ShootIsPressed==true&& bulletIsLanded==true&& WaitTimeRun<=0)||TimeToPlay<=0){
 			//bullet3.active=true;
 			bullet5.active=false;
 			bulletIsLanded=false;
@@ -261,8 +267,9 @@ function Update () {
 			subPlayer1++;
 			playerIsReady=false;
 			TimeToPlay=PlayTime;
+			WaitTimeRun=WaitTime; //Wird zurückgesetzt
 		}
-		else if((bulletIsFlying==false && bullet6Fkt.ShootIsPressed==true&& bulletIsLanded==true)||TimeToPlay<=0){
+		else if((bulletIsFlying==false && bullet6Fkt.ShootIsPressed==true&& bulletIsLanded==true&& WaitTimeRun<=0)||TimeToPlay<=0){
 			//bullet1.active=true;
 			bullet6.active=false;
 			bulletIsLanded=false;
@@ -272,6 +279,7 @@ function Update () {
 			subPlayer1++;
 			playerIsReady=false;
 			TimeToPlay=PlayTime;
+			WaitTimeRun=WaitTime; //Wird zurückgesetzt
 		}
 	}
 	/*
@@ -321,6 +329,9 @@ function ReadyQuestion(){
 function TimeToPlayFkt(){
 	if(bulletIsFlying==false){
 		TimeToPlay-=Time.deltaTime;
+	}
+	if(bulletIsLanded==true){
+		WaitTimeRun-=Time.deltaTime;
 	}
 }
 
