@@ -1,21 +1,45 @@
-﻿
-	#pragma strict
+﻿#pragma strict
+var player : Transform;  // Drag your player here
+private var fp : Vector2;  // first finger position
+private var lp : Vector2;  // last finger position
 
-	public var rotationOffset : int  = 10;
-	private var powercalcuting : boolean = false;
-	private var mouseposition = Vector2();
-	private var difference = Vector3();
-	private var rotZ : float;
 
-	function Update () {
+function Start(){
+player=GetComponent(Transform);
 
-		mouseposition = Camera.main.ScreenToWorldPoint(new Vector3 (Input.mousePosition.x,Input.mousePosition.y,0));
+}
+function Update()
+{
+    for (var touch : Touch in Input.touches)
+    {
+          if (touch.phase == TouchPhase.Began)
+          {
+                fp = touch.position;
+                lp = touch.position;
+          }
+          if (touch.phase == TouchPhase.Moved )
+          {
+                lp = touch.position;
+          }
+          if(touch.phase == TouchPhase.Ended)
+          { 
+      
+                if((fp.x - lp.x) > 80) // left swipe
+          {
+       
+                player.Rotate(0,-90,0);
+       
+          }
+          else if((fp.x - lp.x) < -80) // right swipe
+          {
+                player.Rotate(0,90,0);
+          }
+          else if((fp.y - lp.y) < -80 ) // up swipe
+          {
+                 // add your jumping code here
+          }
+     }
+ }
+   
 
-		//Wärend man gedrückt hält soll die Kanone sich nicht verstellen, und nicht nach hinten Schießen
-			difference = Camera.main.ScreenToWorldPoint(Input.mousePosition)-transform.position;
-			difference.Normalize();
-			
-			rotZ = Mathf.Atan2 (difference.y,difference.x)*Mathf.Rad2Deg;
-			transform.rotation = Quaternion.Euler (0, 0, rotZ+rotationOffset);
-		
-	}
+}

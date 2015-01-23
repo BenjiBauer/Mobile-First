@@ -10,10 +10,12 @@
 	private var HealthPointsFkt : HealthPointsMovingAnt;
 	private var LastChange : float = 100; //Damit Geschwindigkeit nur einmal abgezogen wird.
 	public var MinSpeed : float = 4;
+	private var HomeObj : GameObject;
 	
 function Start(){
+	HomeObj = GameObject.Find("HomeRight");	
 	Cake = Vector3(0,-24.2,0); //Ziel des Kuchens
-	Home = Vector3(240,-24.2,0); //Ziel des Hauses
+	Home = Vector3(HomeObj.transform.position.x,-24.2,0); //Ziel des Hauses
 	target = Cake;//Läuft zu beginn zum Kuchen
 	GetCakeFkt = GetComponentInChildren(GetCakeFunction);
 	GameSystemObj=GameObject.Find("GameSystem");

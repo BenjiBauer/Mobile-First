@@ -8,6 +8,9 @@ private var landedPlayedOnce : boolean = false;
 private var ColliderFkt : CircleCollider2D;
 private var spriteFkt : SpriteRenderer;
 
+private var CameraObj : GameObject;
+private var CameraFkt : CameraFollow;
+
 
 function Start () {
 	GameSystemObj=GameObject.Find("GameSystem");
@@ -15,6 +18,8 @@ function Start () {
 	GameSystemFkt.bulletIsFlying=true;
 	ColliderFkt=GetComponent(CircleCollider2D);
 	spriteFkt=GetComponent(SpriteRenderer);
+	CameraObj=GameObject.Find("Main Camera");
+	CameraFkt=CameraObj.GetComponent(CameraFollow);
 }
 
 function Awake(){
@@ -25,6 +30,8 @@ function Update(){
 	landenSoundFkt();
 	if(AlreadyFlying==true){
 		GameSystemFkt.bulletIsFlying=true;
+		CameraFkt.bulletPos=transform.position;
+		CameraFkt.bulletPos.z=-100;
 	}
 	else{
 		GameSystemFkt.bulletIsFlying=false;
@@ -32,6 +39,7 @@ function Update(){
 			Destroy(gameObject);
 		}
 	}
+	
 }
 function OnCollisionEnter2D (hit : Collision2D) {
 
