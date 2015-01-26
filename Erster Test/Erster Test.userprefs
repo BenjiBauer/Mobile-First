@@ -1,16 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextPlayerReady.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Moving Ants/Scripts/HealthPointsMovingAnt.js">
     <Files>
-      <File FileName="Assets/GameSystem.js" Line="348" Column="25" />
+      <File FileName="Assets/Moving Ants/Scripts/MovingAntMovesLeft.js" Line="18" Column="49" />
+      <File FileName="Assets/GameSystem.js" Line="10" Column="29" />
       <File FileName="Assets/CameraFollow.js" Line="1" Column="1" />
       <File FileName="Assets/Moving Ants/Scripts/MovingAntMovesRight.js" Line="1" Column="1" />
       <File FileName="Assets/PowerAnzeige.js" Line="1" Column="1" />
       <File FileName="Assets/MoveCamera.js" Line="1" Column="1" />
-      <File FileName="Assets/Ant/Scripts/NewBulletShoot.js" Line="1" Column="1" />
-      <File FileName="Assets/Moving Ants/Scripts/MovingAntMovesLeft.js" Line="1" Column="1" />
-      <File FileName="Assets/GifPlay.js" Line="15" Column="1" />
-      <File FileName="Assets/TextPlayerReady.js" Line="21" Column="43" />
+      <File FileName="Assets/Ant/Scripts/NewBulletShoot.js" Line="22" Column="1" />
+      <File FileName="Assets/TextPlayerReady.js" Line="1" Column="1" />
+      <File FileName="Assets/AufladeSoundFkt.js" Line="28" Column="61" />
+      <File FileName="Assets/Ant/Scripts/HealthPoints.js" Line="17" Column="39" />
+      <File FileName="Assets/Moving Ants/Scripts/HealthPointsMovingAnt.js" Line="19" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

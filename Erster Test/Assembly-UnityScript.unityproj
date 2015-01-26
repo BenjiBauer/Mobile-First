@@ -64,6 +64,7 @@
      <Compile Include="Assets\Ant\Scripts\NewBulletShoot.js" />
      <Compile Include="Assets\Ant\Scripts\TankDamage.js" />
      <Compile Include="Assets\AntHealthBarFunction.js" />
+     <Compile Include="Assets\AufladeSoundFkt.js" />
      <Compile Include="Assets\ButtonFire.js" />
      <Compile Include="Assets\ButtonPlayerReady.js" />
      <Compile Include="Assets\CameraFollow.js" />

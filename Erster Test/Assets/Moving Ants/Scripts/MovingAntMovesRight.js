@@ -14,8 +14,8 @@
 	
 function Start(){
 	HomeObj = GameObject.Find("HomeRight");	
-	Cake = Vector3(0,-24.2,0); //Ziel des Kuchens
-	Home = Vector3(HomeObj.transform.position.x,-24.2,0); //Ziel des Hauses
+	Cake = Vector3(0,-20,0); //Ziel des Kuchens
+	Home = Vector3(HomeObj.transform.position.x,-20,0); //Ziel des Hauses
 	target = Cake;//Läuft zu beginn zum Kuchen
 	GetCakeFkt = GetComponentInChildren(GetCakeFunction);
 	GameSystemObj=GameObject.Find("GameSystem");
