@@ -341,11 +341,11 @@ function GameOver(){
 		Time.timeScale=0;
 		GameOverTitelObj.active=true;
 		if(numberOfCakeRight>numberOfCakeLeft){
-			Debug.Log("PLAYER2 WON!");
+			Debug.Log("PLAYER BLUE WON!");
 			PlayerWonTextText.text="Player 2 won!";
 		}
 		else if(numberOfCakeLeft>numberOfCakeRight){
-			Debug.Log("PLAYER1 WON!");
+			Debug.Log("PLAYER RED WON!");
 			PlayerWonTextText.text="Player 1 won!";
 		}
 		else if(numberOfCakeLeft==numberOfCakeRight){

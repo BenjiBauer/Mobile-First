@@ -1,14 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CameraFollow.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextPlayerReady.js">
     <Files>
+      <File FileName="Assets/GameSystem.js" Line="348" Column="25" />
+      <File FileName="Assets/CameraFollow.js" Line="1" Column="1" />
+      <File FileName="Assets/Moving Ants/Scripts/MovingAntMovesRight.js" Line="1" Column="1" />
       <File FileName="Assets/PowerAnzeige.js" Line="1" Column="1" />
       <File FileName="Assets/MoveCamera.js" Line="1" Column="1" />
       <File FileName="Assets/Ant/Scripts/NewBulletShoot.js" Line="1" Column="1" />
-      <File FileName="Assets/GameSystem.js" Line="1" Column="1" />
-      <File FileName="Assets/DestroyBullet.js" Line="1" Column="1" />
-      <File FileName="Assets/CameraFollow.js" Line="126" Column="89" />
-      <File FileName="Assets/PanCamera.cs" Line="8" Column="17" />
+      <File FileName="Assets/Moving Ants/Scripts/MovingAntMovesLeft.js" Line="1" Column="1" />
+      <File FileName="Assets/GifPlay.js" Line="15" Column="1" />
+      <File FileName="Assets/TextPlayerReady.js" Line="21" Column="43" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

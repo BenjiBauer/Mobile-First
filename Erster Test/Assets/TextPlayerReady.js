@@ -15,10 +15,10 @@ function Start () {
 function Update () {
 
 	if(GameSystemFkt.player1==true){
-		ThisText.text="Are You ready Player 1?";
+		ThisText.text="Are You ready Player Red?";
 	}
 	else if(GameSystemFkt.player2==true){
-		ThisText.text="Are You ready Player 2?";
+		ThisText.text="Are You ready Player Blue?";
 	}
 	else{
 		ThisText.text="NO PLAYER";

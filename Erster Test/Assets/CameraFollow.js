@@ -125,6 +125,7 @@ function Update () {
 	if(GameSystemFkt.bulletIsFlying==true){
 		CamCamera.orthographicSize=Mathf.MoveTowards(CamCamera.orthographicSize,ZoomSizeBullet,CameraZoomAwayPlayer*Time.smoothDeltaTime);
 		CamTrans.position = Vector3.MoveTowards(CamTrans.position,bulletPos, CameraMoveAwayPlayer*Time.deltaTime);
+		//CamTrans.position = bulletPos;
 		pinchOrZoom=false; //Zurücksetzten, da sonst die Kamera nicht zur nächsten geht
 	}
 	if(GameSystemFkt.TimeToPlay<=0){//Zurücksetzten, falls nicht gespielt wird.

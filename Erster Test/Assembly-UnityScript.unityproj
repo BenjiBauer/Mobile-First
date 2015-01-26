@@ -73,6 +73,7 @@
      <Compile Include="Assets\ForcePointFkt.js" />
      <Compile Include="Assets\GameSystem.js" />
      <Compile Include="Assets\GetCakeFunction.js" />
+     <Compile Include="Assets\GifPlay.js" />
      <Compile Include="Assets\HPAnzeige.js" />
      <Compile Include="Assets\HealthPointsMovingAntRight.js" />
      <Compile Include="Assets\KuchenAnzeigeFunktion.js" />
