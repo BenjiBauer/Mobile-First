@@ -79,6 +79,7 @@
      <Compile Include="Assets\HealthPointsMovingAntRight.js" />
      <Compile Include="Assets\KuchenAnzeigeFunktion.js" />
      <Compile Include="Assets\LeftCakeFunction.js" />
+     <Compile Include="Assets\ModiSwitch.js" />
      <Compile Include="Assets\MoveCamera.js" />
      <Compile Include="Assets\Moving Ants\Scripts\HealthPointsMovingAnt.js" />
      <Compile Include="Assets\Moving Ants\Scripts\MovingAntBodyDamage.js" />
@@ -115,7 +116,6 @@
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\SmoothFollow2D.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\ZoomCamera.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\tapcontrol.js" />
-     <Compile Include="Assets\StartMainGame.js" />
      <Compile Include="Assets\TEST.js" />
      <Compile Include="Assets\TextPlayerReady.js" />
      <Compile Include="Assets\Timer.js" />

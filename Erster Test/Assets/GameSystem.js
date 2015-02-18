@@ -65,6 +65,25 @@ private var TimeText : UI.Text;
 private var GameOverTitelObj : GameObject;
 private var PlayerWonTextObj : GameObject;
 private var PlayerWonTextText : UI.Text;
+private var GameOverBol : boolean = false;
+
+public var gameModus : String; //Spielmodus als Text
+public var EndValue : int; //Wert für Zeit oder Rundenzahl
+public var EndGameTime : float; //Wert für Zeit
+public var EndGameRound : int; //Wert für Runde
+
+private var EndzeitanzeigeObj : GameObject;
+private var EndzeitanzeigeText : UI.Text; 
+
+private var EndRundeanzeigeObj : GameObject;
+private var EndRundeanzeigeText : UI.Text;
+
+function Awake(){
+	gameModus = PlayerPrefs.GetString("Game Modus"); //Holt variablen vom Hauptmenü
+	EndValue = PlayerPrefs.GetInt("End Value");
+	Debug.Log("Game Modus "+ gameModus);
+	Debug.Log("End Value "+ EndValue);
+}
 
 function Start () {
 
@@ -109,12 +128,26 @@ function Start () {
 	PlayerWonTextText= PlayerWonTextObj.GetComponent(UI.Text);
 	
 	GameOverTitelObj.active=false;
+	
+	EndGameTime=EndValue*60; //Für die Berechnung mit Deltatime
+	EndGameRound=EndValue*2; //Spieler 1 und 2 pro Runde
+	
+	EndzeitanzeigeObj=GameObject.Find("Endzeit");
+	EndzeitanzeigeText=EndzeitanzeigeObj.GetComponent(UI.Text);
+	EndzeitanzeigeObj.active=false;
+	
+	EndRundeanzeigeObj=GameObject.Find("EndRunde");
+	EndRundeanzeigeText=EndRundeanzeigeObj.GetComponent(UI.Text);
+	EndRundeanzeigeObj.active=false;
 }
 
 function Update () {
 	
 	//Spielende
-	GameOver();
+	if(numberOfAntsLeft==0 || numberOfAntsRight==0){
+		GameOver();
+	}
+	EndGame();
 	
 	//Bestimmt welcher Spieler dran ist
 	if(player1){
@@ -309,7 +342,9 @@ function Update () {
 	}*/
 	//Debug.Log(Test.enabled);
 	TimeToText();
-	ReadyQuestion();
+	if(GameOverBol==false){
+		ReadyQuestion();
+	}
 	if(playerIsReady){
 		TimeToPlayFkt();
 	}
@@ -336,7 +371,6 @@ function TimeToPlayFkt(){
 }
 
 function GameOver(){
-	if(numberOfAntsLeft==0 || numberOfAntsRight==0){
 		Debug.Log("GAME OVER");
 		Time.timeScale=0;
 		GameOverTitelObj.active=true;
@@ -352,11 +386,56 @@ function GameOver(){
 			Debug.Log("NO PLAYER WON");
 			PlayerWonTextText.text="Draw!";
 		}
-	}
+		PlayerisReadyObj.active=false;
 }
 
 function TimeToText(){
 	TimeCircle.fillAmount=TimeToPlay/PlayTime;
 	var zeit : int = TimeToPlay;
 	TimeText.text=zeit.ToString();
+}
+
+function EndGame(){
+	if(gameModus == "Time Mode"){
+		EndGameTimeCounter();
+	}
+	else if(gameModus == "Round Mode"){
+		EndGameRoundCounter();
+	}
+}
+
+function EndGameTimeCounter(){
+	EndGameTime-=Time.deltaTime;
+	if(EndGameTime<=0){
+		GameOver();
+		GameOverBol=true;
+	}
+	EndzeitanzeigeObj.active=true;
+	var allsek : int = EndGameTime; //Komplette Sekunden gerundet
+	var min : int = EndGameTime/60;
+	var sek : int = EndGameTime-(min*60);
+	if(sek<10){//damit die Sekunden immer zweistellig bleiben
+		EndzeitanzeigeText.text=min.ToString()+" : 0"+sek;//Countdown
+	}
+	else{
+		EndzeitanzeigeText.text=min.ToString()+" : "+sek;//Countdown
+	}
+}
+
+function EndGameRoundCounter(){
+	if(bulletIsLanded==true&& WaitTimeRun<=0||TimeToPlay<=0){
+		EndGameRound--;
+	}
+	if(EndGameRound<=0){
+		GameOver();
+		GameOverBol=true;
+	}
+	EndRundeanzeigeObj.active=true;
+	var runde : int = 1+EndValue-((1+EndGameRound)/2);
+	EndRundeanzeigeText.text=runde.ToString()+" / "+EndValue;
+	Debug.Log("EndGameRound: " +EndGameRound);
+}
+
+function backToMenu(){
+	Application.LoadLevel ("mainmenu");
 }
