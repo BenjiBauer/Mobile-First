@@ -47,8 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Ant\Scripts\AntRotating.cs" />
-     <Compile Include="Assets\PanCamera.cs" />
-     <Compile Include="Assets\RotatingGun.cs" />
+     <Compile Include="Assets\Camera\PanCamera.cs" />
+     <Compile Include="Assets\Old Scripts\RotatingGun.cs" />
      <Compile Include="Assets\testCS.cs" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />

@@ -12,6 +12,12 @@
 	public var MinSpeed : float = 4;
 	private var HomeObj : GameObject;
 	
+	//Verschiedene Stadien Sprites für Schaden
+	public var MovingAntRightDamageState1 : Sprite;
+	public var MovingAntRightDamageState2 : Sprite;
+	public var MovingAntRightDamageState3 : Sprite;
+	public var MovingAntRightDamageStateNum : int = 1;
+	
 function Start(){
 	HomeObj = GameObject.Find("HomeRight");	
 	Cake = Vector3(0,-20,0); //Ziel des Kuchens
@@ -49,6 +55,8 @@ function Update () {
 		}*/
 		transform.position = Vector3.MoveTowards(transform.position, target, step);
 		SpeedAndDamage();//Ant get slower if it got less healthpoints
+		
+		damageState();
 	}
 	
 function SpeedAndDamage(){
@@ -59,5 +67,30 @@ function SpeedAndDamage(){
 				MoveSpeed=MinSpeed;
 			}
 		Debug.Log("SPE:"+MoveSpeed);
+	}
+}
+
+function damageState(){
+	switch(MovingAntRightDamageStateNum){
+		case 1:
+			GetComponent(SpriteRenderer).sprite = MovingAntRightDamageState1;
+		break;
+		
+		case 2:
+			GetComponent(SpriteRenderer).sprite = MovingAntRightDamageState2;
+		break;
+		
+		case 3:
+			GetComponent(SpriteRenderer).sprite = MovingAntRightDamageState3;
+		break;
+	}
+	if(HealthPointsFkt.movingAntHealthPoints>=66){
+		MovingAntRightDamageStateNum=1;
+	}
+	else if(HealthPointsFkt.movingAntHealthPoints>=33 && HealthPointsFkt.movingAntHealthPoints<66){
+		MovingAntRightDamageStateNum=2;
+	}
+	else{
+		MovingAntRightDamageStateNum=3;
 	}
 }

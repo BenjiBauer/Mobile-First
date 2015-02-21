@@ -2,19 +2,19 @@
 
 public var damageOnThisDome : float = 20; //Höhe des Schadens
 private var antHPfkt : HealthPoints; //Variable für HP-Funktion
+private var thisCollider : PolygonCollider2D;
 
 function Awake() {
-
 	antHPfkt = GetComponentInParent(HealthPoints);
+	thisCollider=GetComponent(PolygonCollider2D);
 }
 
 function Update(){
 
 	if(antHPfkt.tankHealthPoints <=0){
-		Debug.Log("Tank is destroyed");
-		gameObject.active=false;
+		//Debug.Log("Tank is destroyed");
+		thisCollider.enabled =false;
 	}
-
 }
 
 //Sobald etwas in die Trigger eindringt, wird abgezogen

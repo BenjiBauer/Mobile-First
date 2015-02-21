@@ -1,9 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameSystem.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Ant/Scripts/TankDamage.js">
     <Files>
-      <File FileName="Assets/GameSystem.js" Line="440" Column="34" />
-      <File FileName="Assets/ModiSwitch.js" Line="102" Column="2" />
+      <File FileName="Assets/Ant/Scripts/DomeDamage.js" Line="17" Column="3" />
+      <File FileName="Assets/Ant/Scripts/HealthPoints.js" Line="1" Column="1" />
+      <File FileName="Assets/TankDamageStates.js" Line="20" Column="29" />
+      <File FileName="Assets/DomeDamgeStates.js" Line="47" Column="2" />
+      <File FileName="Assets/Ant/Scripts/TankDamage.js" Line="1" Column="1" />
+      <File FileName="Assets/GameSystem.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
