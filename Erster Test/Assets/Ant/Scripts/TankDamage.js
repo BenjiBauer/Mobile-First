@@ -3,9 +3,32 @@
 public var damageOnThisTank : float = 20; //Höhe des Schadens
 private var antHPfkt : HealthPoints; //Variable für HP-Funktion
 
+//Sound für Aufprall
+public var tankSound1 : AudioClip;
+public var tankSound2 : AudioClip;
+public var tankSound3 : AudioClip;
+private var tankSoundState : int = 1;
+private var tankSoundFinal : AudioClip;
+
 function Awake() {
 
 	antHPfkt = GetComponentInParent(HealthPoints);
+}
+
+function Update(){
+	switch(tankSoundState){
+		case 1:
+			tankSoundFinal=tankSound1;
+		break;
+		
+		case 2:
+			tankSoundFinal=tankSound2;
+		break;
+		
+		case 3:
+			tankSoundFinal=tankSound3;
+		break;
+	}
 }
 
 //Sobald etwas in die Trigger eindringt, wird abgezogen
@@ -23,4 +46,6 @@ function OnCollisionEnter2D(other : Collision2D){
 			Debug.Log("Treffer Ant");		
 		//}
 	}
+	tankSoundState=Random.Range(1,4);
+	audio.PlayOneShot(tankSoundFinal);	
 }

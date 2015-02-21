@@ -44,9 +44,7 @@ function Update () {
 		
 	}
 	var allHP = antHPfkt.tankHealthPoints+antHPfkt.antHealthPoints;
-	Debug.Log(allHP);
-	Debug.Log("S "+TankDamageStateNum);
-	Debug.Log((200/SumOfAllTankStates));
+
 	
 	if(allHP>(200-((200/SumOfAllTankStates)*1))){
 		TankDamageStateNum=1;
