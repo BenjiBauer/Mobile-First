@@ -35,7 +35,7 @@ function Update(){
 	}
 	else{
 		GameSystemFkt.bulletIsFlying=false;
-		if(GameSystemFkt.WaitTimeRun<=0){
+		if(GameSystemFkt.WaitTimeRun<=0){ //wird erst nach der Wartezeit zerstört
 			Destroy(gameObject);
 		}
 	}
@@ -47,17 +47,17 @@ function OnCollisionEnter2D (hit : Collision2D) {
 		GameSystemFkt.bulletIsFlying=false;
 		AlreadyFlying=false;
 		GameSystemFkt.bulletIsLanded=true;
-		ColliderFkt.enabled=false;
-		spriteFkt.enabled=false;
+		ColliderFkt.enabled=false; //damit sie nicht unsichtbar weiter zerstört
+		spriteFkt.enabled=false; //Kugel wird ausgeblendet
 	}
 }
 
-function landenSoundFkt(){
+function landenSoundFkt(){ //Spielt landen Sound einmal beim Aufprall
      if(GameSystemFkt.bulletIsLanded==true && landedPlayedOnce==false){
      	audio.PlayOneShot(landedSound);
      	landedPlayedOnce=true;
      }
      else if(GameSystemFkt.bulletIsLanded==false){
-     	landedPlayedOnce=false;
+     	landedPlayedOnce=false; //damit es sich nicht wiederholt
      }
 }

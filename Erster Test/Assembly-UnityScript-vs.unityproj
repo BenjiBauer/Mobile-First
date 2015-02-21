@@ -85,7 +85,7 @@
      <Compile Include="Assets\Menu\RightCakeFunction.js" />
      <Compile Include="Assets\Menu\TextPlayerReady.js" />
      <Compile Include="Assets\Menu\Timer.js" />
-     <Compile Include="Assets\Moving Ants\GetCakeFunction.js" />
+     <Compile Include="Assets\Moving Ants\Scripts\GetCakeFunction.js" />
      <Compile Include="Assets\Moving Ants\Scripts\HealthPointsMovingAnt.js" />
      <Compile Include="Assets\Moving Ants\Scripts\MovingAntBodyDamage.js" />
      <Compile Include="Assets\Moving Ants\Scripts\MovingAntCounterLeft.js" />

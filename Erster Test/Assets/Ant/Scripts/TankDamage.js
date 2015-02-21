@@ -29,6 +29,7 @@ function Update(){
 			tankSoundFinal=tankSound3;
 		break;
 	}
+	tankSoundState=Random.Range(1,4);
 }
 
 //Sobald etwas in die Trigger eindringt, wird abgezogen
@@ -46,6 +47,5 @@ function OnCollisionEnter2D(other : Collision2D){
 			Debug.Log("Treffer Ant");		
 		//}
 	}
-	tankSoundState=Random.Range(1,4);
 	audio.PlayOneShot(tankSoundFinal);	
 }
