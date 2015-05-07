@@ -1,0 +1,19 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Ant/Scripts/AntDemageBody.js">
+    <Files>
+      <File FileName="Assets/Ant/Scripts/AntDemageBody.js" Line="69" Column="37" />
+      <File FileName="Assets/GameSystem.js" Line="1" Column="1" />
+      <File FileName="Assets/Moving Ants/Scripts/HealthPointsMovingAnt.js" Line="1" Column="1" />
+      <File FileName="Assets/Menu/RightCakeFunction.js" Line="1" Column="1" />
+      <File FileName="Assets/Menu/LeftCakeFunction.js" Line="1" Column="1" />
+      <File FileName="Assets/Ant/Scripts/AntCounterLeft.js" Line="1" Column="1" />
+      <File FileName="Assets/Ant/Scripts/TankDamage.js" Line="1" Column="1" />
+      <File FileName="Assets/Moving Ants/Scripts/MovingAntMovesRight.js" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

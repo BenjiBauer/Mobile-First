@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{A538BB78-1FE0-379A-9F64-23259779DD40}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_0_1;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;UNITY_IPHONE;ENABLE_RUNTIME_GI;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_NETWORK;UNITY_IPHONE_API;UNITY_IOS;ENABLE_TEXTUREID_MAP;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;ENABLE_IL2CPP;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Ant Old Scripts\DemagingBody.js" />
+     <Compile Include="Assets\Ant Old Scripts\DemagingBody2.js" />
+     <Compile Include="Assets\Ant Old Scripts\DemagingHead.js" />
+     <Compile Include="Assets\Ant Old Scripts\DemagingHead2.js" />
+     <Compile Include="Assets\Ant Old Scripts\PowerbarFunction.js" />
+     <Compile Include="Assets\Ant Old Scripts\PowerbarFunctionAnt2.js" />
+     <Compile Include="Assets\Ant Old Scripts\ant2HP.js" />
+     <Compile Include="Assets\Ant Old Scripts\antHP.js" />
+     <Compile Include="Assets\Ant\Scripts\AntCounterLeft.js" />
+     <Compile Include="Assets\Ant\Scripts\AntCounterRight.js" />
+     <Compile Include="Assets\Ant\Scripts\AntDemageBody.js" />
+     <Compile Include="Assets\Ant\Scripts\AntHealthBarFunction.js" />
+     <Compile Include="Assets\Ant\Scripts\AntRotating.js" />
+     <Compile Include="Assets\Ant\Scripts\BulletShoot.js" />
+     <Compile Include="Assets\Ant\Scripts\DestroyBullet.js" />
+     <Compile Include="Assets\Ant\Scripts\DomeDamage.js" />
+     <Compile Include="Assets\Ant\Scripts\DomeDamgeStates.js" />
+     <Compile Include="Assets\Ant\Scripts\ForcePointFkt.js" />
+     <Compile Include="Assets\Ant\Scripts\HealthPoints.js" />
+     <Compile Include="Assets\Ant\Scripts\NewBulletShoot.js" />
+     <Compile Include="Assets\Ant\Scripts\PowerBarRadius.js" />
+     <Compile Include="Assets\Ant\Scripts\RightRotationDrag.js" />
+     <Compile Include="Assets\Ant\Scripts\RotationDrag.js" />
+     <Compile Include="Assets\Ant\Scripts\ShootBarHide.js" />
+     <Compile Include="Assets\Ant\Scripts\ShootPointFkt.js" />
+     <Compile Include="Assets\Ant\Scripts\TankDamage.js" />
+     <Compile Include="Assets\Ant\Scripts\TankDamageStates.js" />
+     <Compile Include="Assets\Ant\Scripts\tankHealthBarFunction.js" />
+     <Compile Include="Assets\BulletExplosionFkt.js" />
+     <Compile Include="Assets\Camera\CameraFollow.js" />
+     <Compile Include="Assets\Camera\MoveCamera.js" />
+     <Compile Include="Assets\Camera\PinchZoom.js" />
+     <Compile Include="Assets\GameSystem.js" />
+     <Compile Include="Assets\Menu\ButtonPlayerReady.js" />
+     <Compile Include="Assets\Menu\KuchenAnzeigeFunktion.js" />
+     <Compile Include="Assets\Menu\LeftCakeFunction.js" />
+     <Compile Include="Assets\Menu\ModiSwitch.js" />
+     <Compile Include="Assets\Menu\RightCakeFunction.js" />
+     <Compile Include="Assets\Menu\TextPlayerReady.js" />
+     <Compile Include="Assets\Menu\Timer.js" />
+     <Compile Include="Assets\Moving Ants\Scripts\GetCakeFunction.js" />
+     <Compile Include="Assets\Moving Ants\Scripts\HealthPointsMovingAnt.js" />
+     <Compile Include="Assets\Moving Ants\Scripts\MovingAntBodyDamage.js" />
+     <Compile Include="Assets\Moving Ants\Scripts\MovingAntCounterLeft.js" />
+     <Compile Include="Assets\Moving Ants\Scripts\MovingAntCounterRight.js" />
+     <Compile Include="Assets\Moving Ants\Scripts\MovingAntDamage.js" />
+     <Compile Include="Assets\Moving Ants\Scripts\MovingAntHealthBarFunction.js" />
+     <Compile Include="Assets\Moving Ants\Scripts\MovingAntMovesLeft.js" />
+     <Compile Include="Assets\Moving Ants\Scripts\MovingAntMovesRight.js" />
+     <Compile Include="Assets\Old Scripts\AufladeSoundFkt.js" />
+     <Compile Include="Assets\Old Scripts\ButtonFire.js" />
+     <Compile Include="Assets\Old Scripts\Disapear.js" />
+     <Compile Include="Assets\Old Scripts\GifPlay.js" />
+     <Compile Include="Assets\Old Scripts\HPAnzeige.js" />
+     <Compile Include="Assets\Old Scripts\HealthPointsMovingAntRight.js" />
+     <Compile Include="Assets\Old Scripts\NewRotatingGun.js" />
+     <Compile Include="Assets\Old Scripts\NewRotatingGunRight.js" />
+     <Compile Include="Assets\Old Scripts\NewShoot.js" />
+     <Compile Include="Assets\Old Scripts\PowerAnzeige.js" />
+     <Compile Include="Assets\Old Scripts\RightAntInCake.js" />
+     <Compile Include="Assets\Old Scripts\RotateButtons.js" />
+     <Compile Include="Assets\Old Scripts\Schuss.js" />
+     <Compile Include="Assets\Old Scripts\Shoot.js" />
+     <Compile Include="Assets\SmokeExplosionFkt.js" />
+     <Compile Include="Assets\SmokeFkt.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\CameraRelativeControl.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FirstPersonControl.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FollowTransform.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\Joystick.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\ObliqueNear.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\PlayerRelativeControl.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\RollABall.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\RotationConstraint.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\SidescrollControl.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\SmoothFollow2D.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\ZoomCamera.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\tapcontrol.js" />
+     <Compile Include="Assets\TEST.js" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Transparent Vertex Color.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Detail.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Reflective.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Particles Additive Culled.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Vertex Colored.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Only.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>/Users/Benji/Documents/Uni/3. Semester/Mobile First/Entwicklung/Mobile-First/wANTed/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{C22F67C3-1BEF-7199-CA3F-53A52287B576}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: 02b310ab860eb418ca318a07cc4f4d68
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: soldate_blau_0003_State_4_0
+    21300002: soldate_blau_0003_State_4_1
+    21300004: soldate_blau_0003_State_4_2
+    21300006: soldate_blau_0003_State_4_3
+    21300008: soldate_blau_0003_State_4_4
+    21300010: soldate_blau_0003_State_4_5
+    21300012: soldate_blau_0003_State_4_6
+    21300014: soldate_blau_0003_State_4_7
+    21300016: soldate_blau_0003_State_4_8
+    21300018: soldate_blau_0003_State_4_9
+    21300020: soldate_blau_0003_State_4_10
+    21300022: soldate_blau_0003_State_4_11
+    21300024: soldate_blau_0003_State_4_12
+    21300026: soldate_blau_0003_State_4_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -1
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: soldate_blau_0003_State_4_0
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 1675
+        width: 886
+        height: 447
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: soldate_blau_0003_State_4_1
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 2067
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: soldate_blau_0003_State_4_2
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 2058
+        width: 57
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: soldate_blau_0003_State_4_3
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 2037
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: soldate_blau_0003_State_4_4
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1601
+        width: 362
+        height: 400
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: soldate_blau_0003_State_4_5
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 1977
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: soldate_blau_0003_State_4_6
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 1924
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: soldate_blau_0003_State_4_7
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 1779
+        width: 28
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: soldate_blau_0003_State_4_8
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 1873
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: soldate_blau_0003_State_4_9
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 1906
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: soldate_blau_0003_State_4_10
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 1750
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: soldate_blau_0003_State_4_11
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 1701
+        width: 142
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: soldate_blau_0003_State_4_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 694
+        width: 1759
+        height: 791
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: soldate_blau_0003_State_4_13
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 0
+        width: 890
+        height: 511
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
